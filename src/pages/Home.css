@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cta-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .flag {
+    width: 30px;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e8e8e8;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+  
+  .catering {
+    color: #ff6b6b;
+  }
+  
+  .image-collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .image-collage img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .services {
+    padding: 40px 20px;
+  }
+  
+  .services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .service-card {
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .service-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e8e8e8;
+  }
+  
+  .locations {
+    margin-top: 20px;
+  }
+  
+  .footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-content .logo {
+    color: white;
+  }
+  
+  .footer-content .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-content .social-media {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-content .social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .footer-legal {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-legal a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: block;
+  }
+  
+  .footer-legal p {
+    margin-top: 10px;
+  }
+  

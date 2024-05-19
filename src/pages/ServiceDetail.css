@@ -1,0 +1,69 @@
+.service-detail {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e8e8e8;
+  }
+  
+  .service-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .service-image {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service-info {
+    text-align: left;
+  }
+  
+  .service-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .service-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .service-gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .service-menu {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .service-menu h2 {
+    margin-bottom: 10px;
+  }
+  
+  .menu-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .menu-info p {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+  

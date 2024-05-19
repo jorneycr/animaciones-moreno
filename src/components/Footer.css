@@ -1,0 +1,56 @@
+.footer {
+    background-color: #013D49; /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    padding: 20px 20px;
+    position: relative; /* Para asegurarse de que el footer esté en el fondo */
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-content .logo {
+    color: white;
+  }
+  
+  .footer-content .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-content .nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-content .social-media {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-content .social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .footer-legal {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-legal a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-legal p {
+    margin-top: 10px;
+  }
+  
