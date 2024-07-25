@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
 import Appointment from './pages/Appointment';
 import About from './pages/About';
+import Login from './pages/Login';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/servicios" element={<ServiceDetail />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/cita" element={<Appointment />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Layout>

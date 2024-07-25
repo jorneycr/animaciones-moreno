@@ -129,7 +129,7 @@
   
   .footer {
     background-color: #2c3e50;
-    color: white;
+    color: black;
     padding: 20px 20px;
   }
   
@@ -141,7 +141,7 @@
   }
   
   .footer-content .logo {
-    color: white;
+    color: black;
   }
   
   .footer-content .nav {
@@ -155,7 +155,7 @@
   }
   
   .footer-content .social-media a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.2em;
   }
@@ -166,7 +166,7 @@
   }
   
   .footer-legal a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin: 0 10px;
     display: block;

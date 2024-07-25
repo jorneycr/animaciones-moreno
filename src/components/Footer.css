@@ -1,8 +1,8 @@
 .footer {
-    background-color: #013D49; /* Color de fondo del footer */
-    color: white; /* Color del texto */
+    background-color: #005566;
+    color: black; 
     padding: 20px 20px;
-    position: relative; /* Para asegurarse de que el footer esté en el fondo */
+    position: relative; 
     width: 100%;
     bottom: 0;
   }
@@ -15,7 +15,7 @@
   }
   
   .footer-content .logo {
-    color: white;
+    color: black;
   }
   
   .footer-content .nav {
@@ -24,7 +24,7 @@
   }
   
   .footer-content .nav a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
   
@@ -34,7 +34,7 @@
   }
   
   .footer-content .social-media a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.2em;
   }
@@ -45,12 +45,20 @@
   }
   
   .footer-legal a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin: 0 10px;
   }
   
   .footer-legal p {
     margin-top: 10px;
+    color: black;
   }
-  
+
+  .copyright {
+    background-color: #333;
+    padding: 10px 0;
+    color: #bbb;
+    font-size: 14px;
+    text-align: center;
+  }
