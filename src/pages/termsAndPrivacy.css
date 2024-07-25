@@ -1,0 +1,40 @@
+ 
+  /* Container */
+  .terms-of-use,
+  .privacy-policy {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #555;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 1em;
+    margin: 0.5em 0;
+    color: #666;
+  }
+  
+  /* Last Updated */
+  .terms-of-use p:last-of-type,
+  .privacy-policy p:last-of-type {
+    font-style: italic;
+    color: #999;
+  }
+  

@@ -17,10 +17,10 @@ main {
 
 /* Header and Footer styles are included from respective component CSS files */
 
-.header,
-.footer {
+.header{
   background-color: #f8f8f8;
 }
+
 
 .App {
   display: flex;

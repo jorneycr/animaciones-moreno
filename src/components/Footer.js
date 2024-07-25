@@ -22,8 +22,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-legal">
-          <a href="#privacidad">POLÍTICAS DE PRIVACIDAD</a>
-          <a href="#terminos">TÉRMINOS DE USO</a>
+          <Link to="/privacy-policy">POLÍTICAS DE PRIVACIDAD</Link>
+          <Link to="/terms-of-use">TÉRMINOS DE USO</Link>
         </div>
 
       </footer>

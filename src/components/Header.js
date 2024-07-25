@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const [language, setLanguage] = useState('es');
+
+  const handleLanguageChange = (e) => {
+    const selectedLanguage = e.target.value;
+    setLanguage(selectedLanguage);
+    alert(`Idioma cambiado a: ${selectedLanguage === 'es' ? 'Español' : selectedLanguage === 'en' ? 'Inglés' : 'Francés'}`);
+  };
+
   return (
     <header className="header">
       <div className="logo">Logo</div>
@@ -14,7 +22,11 @@ const Header = () => {
       </nav>
       <div className="cta">
         <Link to="/cita" className="cta-button">SOLICITAR CITA</Link>
-        <img src="path/to/costa-rica-flag.png" alt="CR Flag" className="flag" />
+        <select value={language} onChange={handleLanguageChange} className="language-select">
+          <option value="es">Español</option>
+          <option value="en">Inglés</option>
+          <option value="fr">Francés</option>
+        </select>
       </div>
     </header>
   );
