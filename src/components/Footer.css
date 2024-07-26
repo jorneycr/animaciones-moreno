@@ -1,66 +1,84 @@
 .full-footer {
-  position: relative;
-  width: 100%;
-  bottom: 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
 .footer {
-  background-color: #005566;
-  color: black;
-  padding: 20px 20px;
-
+    background-color: #005566;
+    color: black;
+    padding: 20px 20px;
 }
 
 .logo-social-media {
-  display: flex;
-  width: 80%;
-  margin: 3% 10%;
-  justify-content: space-between;
+    display: flex;
+    width: 80%;
+    margin: 3% 10%;
+    justify-content: space-between;
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-content .logo {
-  color: black;
+    color: black;
 }
 
 .footer-content .nav {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .footer-content .nav a {
-  color: #FFF;
-  text-decoration: none;
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content .nav a:hover,
+.footer-content .nav a:focus {
+    color: #FFD700; /* Color dorado para el efecto hover/focus */
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
 }
 
 .footer-legal {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .footer-legal a {
-  color: #FFF;
-  text-decoration: none;
-  margin: 0 10px;
+    color: #FFF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus {
+    color: #FFD700; /* Color dorado para el efecto hover/focus */
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
 }
 
 .footer-legal p {
-  margin-top: 10px;
-  color: #FFF;
+    margin-top: 10px;
+    color: #FFF;
 }
 
 .copyright {
-  background-color: #333;
-  padding: 10px 0;
-  color: #bbb;
-  font-size: 14px;
-  text-align: center;
+    background-color: #333;
+    padding: 10px 0;
+    color: #bbb;
+    font-size: 14px;
+    text-align: center;
+}
+
+img.logo {
+    width: 100px;
+    height: 50px;
 }

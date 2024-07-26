@@ -1,53 +1,61 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Puedes ajustar el color de fondo según tu diseño */
 }
 
 .logo {
-  font-size: 1.5em;
-  font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .nav {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav a {
-  text-decoration: none;
-  color: #333;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+    color: #ff6b6b; /* Color rojo para el efecto hover/focus */
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
 }
 
 .cta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .cta-button {
-  background-color: #ff6b6b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 25px;
-  font-size: 1em;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #ff4b4b;
+    background-color: #ff4b4b;
 }
 
 .flag {
-  width: 30px;
+    width: 30px;
 }
 
 .language-select {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
