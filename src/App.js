@@ -7,7 +7,7 @@ import Appointment from './pages/Appointment';
 import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import About from './pages/About';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import './App.css';
 import ContactForm from './pages/ContactForm';
 
