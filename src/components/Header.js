@@ -16,12 +16,12 @@ const Header = () => {
       <div className="logo">Logo</div>
       <nav className="nav">
         <Link to="/">INICIO</Link>
-        <Link to="/servicios">SERVICIOS</Link>
-        <Link to="/nosotros">NOSOTROS</Link>
+        <Link to="/services">SERVICIOS</Link>
+        <Link to="/about">NOSOTROS</Link>
+        <Link to="/contact">CONTACTO</Link>
         <Link to="/login">LOGIN</Link>
       </nav>
       <div className="cta">
-        <Link to="/cita" className="cta-button">SOLICITAR CITA</Link>
         <select value={language} onChange={handleLanguageChange} className="language-select">
           <option value="es">Español</option>
           <option value="en">Inglés</option>

@@ -62,7 +62,7 @@ const Home = () => {
           <h4>Ubicaciones</h4>
           <p>San José - Escazú - Lindora - Heredia - Alajuela - San Ramón - Puntarenas - Caldera - Liberia - Nicoya</p>
         </div>
-        <button className="cta-button">SOLICITAR CITA</button>
+        <button className="cta-button">SOLICITAR COTIZACIÓN</button>
       </section>
 </>
   );

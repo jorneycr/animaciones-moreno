@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./login.css";
+import "./Login.css";
 import SignInForm from "./SingIn";
 import SignUpForm from "./SignUp";
 
@@ -23,8 +23,8 @@ function Login() {
         <aside className="overlay-container">
           <div className="overlay">
             <section className="overlay-panel overlay-left">
-              <h1>¡Bienvenido de nuevo!</h1>
-              <p>
+              <h1 style={{color:'#FFF'}}>¡Bienvenido de nuevo!</h1>
+              <p style={{color:'#FFF'}}>
                 Para mantenerte conectado con nosotros, por favor inicia sesión con tu información personal.
               </p>
               <button

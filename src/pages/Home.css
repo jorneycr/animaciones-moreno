@@ -127,18 +127,18 @@
     margin-top: 20px;
   }
   
-  .footer-content {
+  /* .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
+  } */
   
-  .footer-content .logo {
+  /* .footer-content .logo {
     color: black;
-  }
+  } */
   
-  .footer-content .nav {
+  /* .footer-content .nav {
     display: flex;
     gap: 20px;
   }
@@ -152,8 +152,8 @@
     color: black;
     text-decoration: none;
     font-size: 1.2em;
-  }
-  
+  } */
+/*   
   .footer-legal {
     text-align: center;
     margin-top: 20px;
@@ -168,5 +168,5 @@
   
   .footer-legal p {
     margin-top: 10px;
-  }
+  } */
   

@@ -1,9 +1,7 @@
 .login {
   display: flex;
   justify-content: center;
-  /* Centers horizontally */
   align-items: center;
-  /* Centers vertically */
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");

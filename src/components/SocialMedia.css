@@ -1,0 +1,29 @@
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    background-color: #333;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.social-icon.twitter {
+    background-color: #1da1f2;
+}
