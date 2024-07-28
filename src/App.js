@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
-import Appointment from './pages/Appointment';
+import Appointment from './pages/QuotePage';
 import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import About from './pages/About';
 import Login from './pages/Login/Login';
 import './App.css';
 import ContactForm from './pages/ContactForm';
+import QuotePage from './pages/QuotePage';
 
 function App() {
     const [services, setServices] = useState([]);
@@ -85,8 +86,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home services={services} />} />
                     <Route path="/service/:slug" element={<ServiceDetail services={services} />} />
+                    <Route path="/quote/:slug" element={<QuotePage services={services} />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/cita" element={<Appointment />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/terms-of-use" element={<TermsOfUse />} />
