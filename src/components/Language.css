@@ -1,0 +1,27 @@
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.language-selector img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.language-selector img:hover {
+    transform: scale(1.1);
+    border-color: #ccc;
+}
+
+.language-selector img.active {
+    border-color: #007BFF; /* Color del borde para el idioma activo */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra para resaltar el idioma activo */
+}

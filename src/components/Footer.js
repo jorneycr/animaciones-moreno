@@ -10,7 +10,9 @@ const Footer = () => {
             <section className="footer">
                 <section className="footer-content">
                     <section className='logo-social-media'>
-                        <img className='logo' src={logoWhite} alt="logoWhite" />
+                        <Link to="/">
+                            <img className='logo' src={logoWhite} alt="logoWhite" />
+                        </Link>
                         <SocialMedia />
                     </section>
                     <nav className="nav">

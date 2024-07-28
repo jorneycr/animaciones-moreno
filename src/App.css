@@ -18,3 +18,12 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.logo {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
