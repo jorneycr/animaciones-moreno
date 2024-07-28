@@ -1,31 +1,20 @@
-/* General styles */
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-main {
-  padding: 20px;
+.header {
+    background-color: #f8f8f8;
 }
-
-/* Header and Footer styles are included from respective component CSS files */
-
-.header{
-  background-color: #f8f8f8;
-}
-
 
 .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-/* Specific styles for the Home and ServiceDetail pages are included in their respective CSS files */
