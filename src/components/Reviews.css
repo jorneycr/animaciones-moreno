@@ -1,0 +1,23 @@
+.reviews {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reviews ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reviews li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}

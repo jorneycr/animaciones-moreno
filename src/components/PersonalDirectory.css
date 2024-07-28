@@ -1,0 +1,23 @@
+.personal-directory {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.personal-directory h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.personal-directory ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-directory li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}

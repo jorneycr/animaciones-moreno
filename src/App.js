@@ -12,6 +12,9 @@ import './App.css';
 import ContactForm from './pages/ContactForm';
 import QuotePage from './pages/QuotePage';
 import Blog from './components/Blog';
+import Reviews from './components/Reviews';
+import Gallery from './components/Gallery';
+import PersonalDirectory from './components/PersonalDirectory';
 
 function App() {
     const [services, setServices] = useState([]);
@@ -92,6 +95,9 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/contact" element={<ContactForm />} />
+                    <Route path="/reviews" element={<Reviews />} />
+                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/personal-directory" element={<PersonalDirectory />} />
                     <Route path="/terms-of-use" element={<TermsOfUse />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="*" element={<Navigate to="/" />} />
