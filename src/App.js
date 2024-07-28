@@ -11,6 +11,7 @@ import Login from './pages/Login/Login';
 import './App.css';
 import ContactForm from './pages/ContactForm';
 import QuotePage from './pages/QuotePage';
+import Blog from './components/Blog';
 
 function App() {
     const [services, setServices] = useState([]);
@@ -88,6 +89,7 @@ function App() {
                     <Route path="/service/:slug" element={<ServiceDetail services={services} />} />
                     <Route path="/quote/:slug" element={<QuotePage services={services} />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/terms-of-use" element={<TermsOfUse />} />
