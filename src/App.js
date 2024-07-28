@@ -13,7 +13,7 @@ import ContactForm from './pages/ContactForm';
 import QuotePage from './pages/QuotePage';
 import Blog from './components/Blog';
 import Reviews from './components/Reviews';
-import Gallery from './components/Gallery';
+import GalleryAll from './components/GalleryAll';
 import PersonalDirectory from './components/PersonalDirectory';
 
 function App() {
@@ -96,7 +96,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/reviews" element={<Reviews />} />
-                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/gallery" element={<GalleryAll />} />
                     <Route path="/personal-directory" element={<PersonalDirectory />} />
                     <Route path="/terms-of-use" element={<TermsOfUse />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />

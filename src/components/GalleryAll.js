@@ -1,5 +1,5 @@
 import React from 'react';
-import './Gallery.css';
+import './GalleryAll.css';
 
 const images = [
     { id: 1, src: 'path/to/image1.jpg', alt: 'Evento 1' },
@@ -8,7 +8,7 @@ const images = [
     // Agrega más imágenes según sea necesario
 ];
 
-const Gallery = () => {
+const GalleryAll = () => {
     return (
         <div className="gallery">
             <h1>Galería de Eventos</h1>
@@ -21,4 +21,4 @@ const Gallery = () => {
     );
 };
 
-export default Gallery;
+export default GalleryAll;
