@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
-import Appointment from './pages/QuotePage';
 import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import About from './pages/About';
 import Login from './pages/Login/Login';
-import './App.css';
 import ContactForm from './pages/ContactForm';
 import QuotePage from './pages/QuotePage';
 import Blog from './components/Blog';
 import Reviews from './components/Reviews';
 import GalleryAll from './components/GalleryAll';
 import PersonalDirectory from './components/PersonalDirectory';
+
+import despedidas from './assets/images/home/despedidas.jpg';
+import escolares from './assets/images/home/escolares.jpg';
+import bodas from './assets/images/home/bodas.jpg';
+import familiares from './assets/images/home/familiares.jpg';
+import graduaciones from './assets/images/home/graduaciones.jpg';
+import cumpleanos from './assets/images/home/cumpleanos.jpg';
 
 function App() {
     const [services, setServices] = useState([]);
@@ -26,18 +32,18 @@ function App() {
                 {
                     slug: 'despedidas',
                     name: 'Despedidas',
-                    description: 'consectetur adipiscing elit',
-                    icon: 'path/to/icon1.png',
-                    image: 'path/to/image1.jpg',
+                    description: 'Todo tipo de despedidas',
+                    icon: despedidas,
+                    image: despedidas,
                     gallery: ['path/to/gallery1.jpg', 'path/to/gallery2.jpg', 'path/to/gallery3.jpg'],
                     menu: ['Plato 1', 'Plato 2', 'Plato 3'],
                 },
                 {
                     slug: 'escolares',
                     name: 'Escolares',
-                    description: 'consectetur adipiscing elit',
-                    icon: 'path/to/icon2.png',
-                    image: 'path/to/image2.jpg',
+                    description: 'Fiestas escolares de niños',
+                    icon: escolares,
+                    image: escolares,
                     gallery: ['path/to/gallery4.jpg', 'path/to/gallery5.jpg', 'path/to/gallery6.jpg'],
                     menu: ['Plato A', 'Plato B', 'Plato C'],
                 },
@@ -45,8 +51,8 @@ function App() {
                     slug: 'bodas',
                     name: 'Bodas',
                     description: 'Planificación completa para bodas.',
-                    icon: 'path/to/icon3.png',
-                    image: 'path/to/image3.jpg',
+                    icon: bodas,
+                    image: bodas,
                     gallery: ['path/to/gallery7.jpg', 'path/to/gallery8.jpg', 'path/to/gallery9.jpg'],
                     menu: ['Plato D', 'Plato E', 'Plato F'],
                 },
@@ -54,8 +60,8 @@ function App() {
                     slug: 'familiares',
                     name: 'Familiares',
                     description: 'Eventos familiares con todo incluido.',
-                    icon: 'path/to/icon4.png',
-                    image: 'path/to/image4.jpg',
+                    icon: familiares,
+                    image: familiares,
                     gallery: ['path/to/gallery10.jpg', 'path/to/gallery11.jpg', 'path/to/gallery12.jpg'],
                     menu: ['Plato G', 'Plato H', 'Plato I'],
                 },
@@ -63,17 +69,17 @@ function App() {
                     slug: 'graduaciones',
                     name: 'Graduaciones',
                     description: 'Organización y animación para graduaciones.',
-                    icon: 'path/to/icon5.png',
-                    image: 'path/to/image5.jpg',
+                    icon: graduaciones,
+                    image: graduaciones,
                     gallery: ['path/to/gallery13.jpg', 'path/to/gallery14.jpg', 'path/to/gallery15.jpg'],
                     menu: ['Plato J', 'Plato K', 'Plato L'],
                 },
                 {
-                    slug: 'otro',
-                    name: 'Otro',
-                    description: 'Otros tipos de eventos personalizados.',
-                    icon: 'path/to/icon6.png',
-                    image: 'path/to/image6.jpg',
+                    slug: 'cumpleanos',
+                    name: 'Cumpleaños',
+                    description: 'Organización y animación para cumpleaños.',
+                    icon: cumpleanos,
+                    image: cumpleanos,
                     gallery: ['path/to/gallery16.jpg', 'path/to/gallery17.jpg', 'path/to/gallery18.jpg'],
                     menu: ['Plato M', 'Plato N', 'Plato O'],
                 },

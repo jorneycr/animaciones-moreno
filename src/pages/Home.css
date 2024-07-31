@@ -38,20 +38,6 @@ body {
   gap: 10px;
 }
 
-.cta-button {
-  background-color: #ff6b6b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #e65555;
-}
-
 .flag {
   width: 30px;
 }
@@ -119,10 +105,10 @@ body {
 }
 
 .service-card {
-  flex: 1 1 calc(25% - 20px);
-  max-width: calc(25% - 20px);
-  min-width: 250px; /* Set a minimum width if necessary */
-  min-height: 350px; /* Set a minimum height for uniformity */
+  min-width: 280px;
+  min-height: 250px;
+  max-width: 280px;
+  max-height: 250px;
   text-align: center;
   background-color: #fff;
   padding: 20px;
@@ -138,10 +124,10 @@ body {
 }
 
 .service-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-  object-fit: cover; /* Ensure the image fits within the specified dimensions */
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0px;
+  object-fit: cover;
 }
 
 .service-card h3 {
@@ -247,19 +233,4 @@ body {
 .personal-directory p {
   color: #666;
   margin-bottom: 20px;
-}
-
-/* Estilos del botón común */
-.cta-button {
-  background-color: #ff6b6b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #e65555;
 }

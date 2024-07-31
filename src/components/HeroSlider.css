@@ -1,0 +1,46 @@
+.hero-slider .slick-slide {
+    height: 400px; /* Ajusta la altura según necesites */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* HeroSlider.css */
+.hero-slider {
+    position: relative;
+}
+
+.hero-slide {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: auto;
+    visibility: hidden; /* Hide image element */
+}
+
+
+
+

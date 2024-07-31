@@ -26,12 +26,24 @@
     gap: 10px;
 }
 
-.cta-button {
+  .cta-button {
     background-color: #ff6b6b;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button a {
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: #ff4b4b;
 }
 
 .language-select {
