@@ -21,6 +21,7 @@ import bodas from './assets/images/home/bodas.jpg';
 import familiares from './assets/images/home/familiares.jpg';
 import graduaciones from './assets/images/home/graduaciones.jpg';
 import cumpleanos from './assets/images/home/cumpleanos.jpg';
+import BlogPost from './components/BlogPost';
 
 function App() {
     const [services, setServices] = useState([]);
@@ -99,6 +100,7 @@ function App() {
                     <Route path="/quote/:slug" element={<QuotePage services={services} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/post/:id" element={<BlogPost />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/reviews" element={<Reviews />} />

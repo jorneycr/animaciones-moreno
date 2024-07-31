@@ -4,20 +4,45 @@
     text-align: center;
 }
 
-.personal-directory h1 {
+.personal-directory h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-.personal-directory ul {
-    list-style: none;
-    padding: 0;
+.team-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
 }
 
-.personal-directory li {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.photo1 {
+    /* background-image: url('/path/to/photo1.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+.photo2 {
+    /* background-image: url('/path/to/photo2.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+.photo3 {
+    /* background-image: url('/path/to/photo3.jpg'); */
+    background-size: cover;
+    background-position: center;
 }

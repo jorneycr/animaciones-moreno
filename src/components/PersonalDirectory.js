@@ -10,9 +10,25 @@ const teamMembers = [
 
 const PersonalDirectory = () => {
     return (
-        <div className="personal-directory">
-            <h1>Directorio Personal</h1>
-            <ul>
+        <section className="personal-directory">
+            <h2>Directorio Personal</h2>
+            <p>Contamos con un equipo diverso y talentoso que se especializa en diferentes áreas de la animación y la organización de eventos. Desde DJ's y animadores, hasta coordinadores y diseñadores, todos estamos dedicados a brindarte el mejor servicio.</p>
+            <section className="team-gallery">
+                <section className="team-member">
+                    <section className="team-photo photo1"></section>
+                    <p>Juan Moreno - Administrador</p>
+                </section>
+                <section className="team-member">
+                    <section className="team-photo photo2"></section>
+                    <p>Maria López - Coordinadora</p>
+                </section>
+                <section className="team-member">
+                    <section className="team-photo photo3"></section>
+                    <p>Carlos Gómez - Animador</p>
+                </section>
+            </section>
+            {/* <ul>
+                
                 {teamMembers.map(member => (
                     <li key={member.id}>
                         <h3>{member.name}</h3>
@@ -20,8 +36,8 @@ const PersonalDirectory = () => {
                         <p>{member.description}</p>
                     </li>
                 ))}
-            </ul>
-        </div>
+            </ul> */}
+        </section>
     );
 };
 

@@ -17,7 +17,7 @@ const Home = ({ services }) => {
             </section> */}
             <HeroSlider/>
 
-            <section className="services">
+            <section id='services' className="services">
                 <h2>NUESTROS SERVICIOS</h2>
                 <div className="service-cards">
                     {services.map(service => (

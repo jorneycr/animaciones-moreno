@@ -26,7 +26,7 @@
   
   .blog-post h2 {
     margin-bottom: 0.5rem;
-    color: #0073e6;
+    color: #ff6b6b;
   }
   
   .post-info {
@@ -49,13 +49,13 @@
     display: inline-block;
     margin-top: 1rem;
     color: #fff;
-    background-color: #0073e6;
+    background-color: #ff6b6b;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     text-decoration: none;
   }
   
   .read-more:hover {
-    background-color: #005bb5;
+    background-color: #f44a4a;
   }
   
