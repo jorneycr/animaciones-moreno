@@ -55,8 +55,10 @@ function QuotePage({ services }) {
         <div className="service-details">
           <h2>{selectedService.name.toUpperCase()}</h2>
           <p>{selectedService.description}</p>
-          <h3>DETALLES</h3>
-          <p>{selectedService.description}</p>
+          <h4>DETALLES</h4>
+          {selectedService.menu.map((item, index) => (
+                        <p key={index}>{item}</p>
+                    ))}
         </div>
       </div>
       <div className="form-section">
@@ -130,7 +132,7 @@ function QuotePage({ services }) {
           {formik.touched.message && formik.errors.message ? (
             <div className="error">{formik.errors.message}</div>
           ) : null}
-          <button type="submit">SIGUIENTE</button>
+          <button type="submit">ENVIAR</button>
         </form>
       </div>
     </main>

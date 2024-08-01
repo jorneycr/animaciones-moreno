@@ -27,22 +27,28 @@
     background-color: #ccc;
     border-radius: 50%;
     margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .photo1 {
-    /* background-image: url('/path/to/photo1.jpg'); */
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/20/04/30/asian-man-1468032_960_720.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .photo2 {
-    /* background-image: url('/path/to/photo2.jpg'); */
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/23/08/03/woman-4570763_1280.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .photo3 {
-    /* background-image: url('/path/to/photo3.jpg'); */
+    background-image: url('https://cdn.pixabay.com/photo/2015/01/08/18/30/man-593372_1280.jpg');
     background-size: cover;
     background-position: center;
 }

@@ -71,8 +71,8 @@
 
 .modal {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -127,11 +127,11 @@
 
 .review-form-input,
 .review-form-textarea {
-    width: 100%;
+    width: 250px;
     padding: 0.75rem;
     border: 1px solid #bdc3c7;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #2c3e50;
     font-family: inherit;
     resize: none;
@@ -143,11 +143,16 @@
 }
 
 .review-form-textarea {
-    min-height: 100px;
+    min-height: 60px;
 }
 
 .review-form-error {
     color: #e74c3c;
     margin-top: 0.5rem;
     font-size: 0.875rem;
+}
+
+section.buttonReview {
+    justify-content: center;
+    display: flex;
 }

@@ -32,7 +32,7 @@ const ServiceDetail = ({ services }) => {
                 ))}
             </div>
             <div className="service-menu">
-                <h2>Información de menú del servicio</h2>
+                <h2>Información del servicio de {service.name}</h2>
                 <div className="menu-info">
                     {service.menu.map((item, index) => (
                         <p key={index}>{item}</p>
@@ -40,7 +40,7 @@ const ServiceDetail = ({ services }) => {
                 </div>
             </div>
             <div className="quote-button">
-                <button onClick={handleQuoteClick}>Cotizar Servicio</button>
+                <button className='cta-button' onClick={handleQuoteClick}>Cotizar Servicio</button>
             </div>
         </section>
     );
