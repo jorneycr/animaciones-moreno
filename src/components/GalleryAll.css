@@ -1,24 +1,34 @@
+/* GalleryAll.css */
 .gallery {
-    padding: 20px;
+    padding: 40px 20px; /* Increased padding for a more spacious feel */
     background-color: #f9f9f9;
     text-align: center;
 }
 
 .gallery h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin for better spacing */
     color: #333;
+    font-size: 2rem; /* Larger font size for the heading */
+    font-weight: 600; /* Bolder text for emphasis */
 }
 
 .image-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px; /* Increased gap for better spacing between images */
     justify-content: center;
 }
 
 .image-grid img {
-    width: 200px;
-    height: 200px;
+    width: 250px; /* Slightly larger images */
+    height: 250px; /* Matching height for consistency */
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px; /* Softer corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
 }
