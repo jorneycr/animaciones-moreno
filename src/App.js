@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
+
 import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -123,26 +125,28 @@ function App() {
     }, []);
 
     return (
-        <Router>
-            <Layout>
-                <Routes>
-                    <Route path="/" element={<Home services={services} />} />
-                    <Route path="/service/:slug" element={<ServiceDetail services={services} />} />
-                    <Route path="/quote/:slug" element={<QuotePage services={services} />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/post/:id" element={<BlogPost />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/contact" element={<ContactForm />} />
-                    <Route path="/reviews" element={<Reviews />} />
-                    <Route path="/gallery" element={<GalleryAll />} />
-                    <Route path="/personal-directory" element={<PersonalDirectory />} />
-                    <Route path="/terms-of-use" element={<TermsOfUse />} />
-                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                    <Route path="*" element={<Navigate to="/" />} />
-                </Routes>
-            </Layout>
-        </Router>
+        <LanguageProvider>
+            <Router>
+                <Layout>
+                    <Routes>
+                        <Route path="/" element={<Home services={services} />} />
+                        <Route path="/service/:slug" element={<ServiceDetail services={services} />} />
+                        <Route path="/quote/:slug" element={<QuotePage services={services} />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/blog" element={<Blog />} />
+                        <Route path="/post/:id" element={<BlogPost />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/contact" element={<ContactForm />} />
+                        <Route path="/reviews" element={<Reviews />} />
+                        <Route path="/gallery" element={<GalleryAll />} />
+                        <Route path="/personal-directory" element={<PersonalDirectory />} />
+                        <Route path="/terms-of-use" element={<TermsOfUse />} />
+                        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                        <Route path="*" element={<Navigate to="/" />} />
+                    </Routes>
+                </Layout>
+            </Router>
+        </LanguageProvider>
     );
 }
 

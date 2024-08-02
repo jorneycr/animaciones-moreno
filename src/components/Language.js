@@ -1,25 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './Language.css';
 import esLogo from '../assets/images/es.png';
 import enLogo from '../assets/images/en.png';
 import frLogo from '../assets/images/fr.png';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Language = () => {
-    const [language, setLanguage] = useState('es');
-
-    const translations = {
-        es: {
-            title: "Calculadora de Distancia Euclidiana",
-        },
-        en: {
-            title: "Euclidean Distance Calculator",
-        },
-        fr: {
-            title: "Calculatrice de distance euclidienne",
-        },
-    };
-
-    const t = translations[language];
+    const { language, setLanguage } = useContext(LanguageContext);
 
     return (
         <nav className="language-selector">

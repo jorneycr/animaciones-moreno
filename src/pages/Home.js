@@ -1,24 +1,19 @@
 // Home.js
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
 import './Home.css';
 import HeroSlider from '../components/HeroSlider';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Home = ({ services }) => {
+    const { t } = useContext(LanguageContext);
+
     return (
         <>
-            {/* <section className="hero">
-                <div className="hero-content">
-                    <h1>ANIMACIONES MORENO</h1>
-                    <p>SERVICIOS DE ANIMACIÓN Y <span className="catering">CATERING SERVICE</span></p>
-                </div>
-                
-            </section> */}
             <HeroSlider/>
 
             <section id='services' className="services">
-                <h2>NUESTROS SERVICIOS</h2>
+                <h2>{t.homeTitle}</h2>
                 <div className="service-cards">
                     {services.map(service => (
                         <Link to={`/service/${service.slug}`} key={service.slug}>
@@ -32,40 +27,37 @@ const Home = ({ services }) => {
                 </div>
             </section>
 
-            {/* Sección de Review */}
             <section className="review">
-                <h2>Reseñas</h2>
-                <p>Lea las opiniones de nuestros clientes satisfechos.</p>
+                <h2>{t.reviews}</h2>
+                <p>{t.readReviews}</p>
                 <button className="cta-button">
-                    <Link to="/reviews">Ver Reseñas</Link>
+                    <Link to="/reviews">{t.viewReviews}</Link>
                 </button>
             </section>
 
-            {/* Sección de Galería */}
             <section className="gallery">
-                <h2>Galería</h2>
-                <p>Explore nuestras fotos de eventos pasados.</p>
+                <h2>{t.gallery}</h2>
+                <p>{t.exploreGallery}</p>
                 <button className="cta-button">
-                    <Link to="/gallery">Ver Galería</Link>
+                    <Link to="/gallery">{t.viewGallery}</Link>
                 </button>
             </section>
 
-            {/* Sección de Directorio Personal */}
             <section className="personal-directory">
-                <h2>Directorio Personal</h2>
-                <p>Conozca a nuestro equipo y su experiencia.</p>
+                <h2>{t.personalDirectory}</h2>
+                <p>{t.meetTeam}</p>
                 <button className="cta-button">
-                    <Link to="/personal-directory">Ver Directorio</Link>
+                    <Link to="/personal-directory">{t.viewDirectory}</Link>
                 </button>
             </section>
 
             <section className="contact">
-                <p>Llama al <strong>(800) 8888-8888</strong></p>
+                <p>{t.callUs} <strong>(800) 8888-8888</strong></p>
                 <div className="locations">
-                    <h4>Ubicaciones</h4>
-                    <p>San José - Alajuela - San Ramón - Liberia - Nicoya</p>
+                    <h4>{t.locations}</h4>
+                    <p>{t.locationList}</p>
                 </div>
-                <button className="cta-button"><Link to="/contact">CONTACTAR</Link></button>
+                <button className="cta-button"><Link to="/contact">{t.contact}</Link></button>
             </section>
         </>
     );
