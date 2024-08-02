@@ -1,0 +1,51 @@
+.calendar-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.calendar-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.react-calendar {
+    width: 100%;
+    border: none;
+}
+
+.react-calendar__tile {
+    text-align: center;
+}
+
+.react-calendar__tile p {
+    margin: 0;
+    padding: 5px;
+}
+
+.highlight-escolar .react-calendar__tile {
+    background-color: #ffc107;
+    border-radius: 5px;
+    color: white;
+}
+
+.highlight-familiar .react-calendar__tile {
+    background-color: #28a745;
+    border-radius: 5px;
+    color: white;
+}
+
+.highlight-despedida .react-calendar__tile {
+    background-color: #17a2b8;
+    border-radius: 5px;
+    color: white;
+}
+
+.highlight-boda .react-calendar__tile {
+    background-color: #dc3545;
+    border-radius: 5px;
+    color: white;
+}

@@ -63,7 +63,7 @@ const Home = ({ services }) => {
                 <p>Llama al <strong>(800) 8888-8888</strong></p>
                 <div className="locations">
                     <h4>Ubicaciones</h4>
-                    <p>San José - Escazú - Lindora - Heredia - Alajuela - San Ramón - Puntarenas - Caldera - Liberia - Nicoya</p>
+                    <p>San José - Alajuela - San Ramón - Liberia - Nicoya</p>
                 </div>
                 <button className="cta-button"><Link to="/contact">CONTACTAR</Link></button>
             </section>

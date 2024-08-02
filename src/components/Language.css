@@ -1,14 +1,24 @@
 .language-selector {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 5px;
+}
+
+.language-selector ul {
+    list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.language-selector li {
+    margin: 0;
 }
 
 .language-selector img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     border-radius: 50%;
     border: 2px solid white;
@@ -24,4 +34,29 @@
 .language-selector img.active {
     border-color: #007BFF; /* Color del borde para el idioma activo */
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra para resaltar el idioma activo */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .language-selector {
+        top: 10px;
+        right: 10px;
+    }
+
+    .language-selector img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-selector {
+        top: 20px;
+        right: 5px;
+    }
+
+    .language-selector img {
+        width: 30px;
+        height: 30px;
+    }
 }

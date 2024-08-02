@@ -22,16 +22,6 @@ body {
   font-weight: bold;
 }
 
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-}
-
 .cta {
   display: flex;
   align-items: center;

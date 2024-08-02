@@ -22,32 +22,37 @@ const Language = () => {
     const t = translations[language];
 
     return (
-        <div>
-            <div className="language-selector">
-                <img 
-                    src={esLogo} 
-                    alt="ES" 
-                    title="Español"
-                    onClick={() => setLanguage('es')} 
-                    className={language === 'es' ? 'active' : ''}
-                />
-                <img 
-                    src={enLogo} 
-                    alt="EN" 
-                    title="English"
-                    onClick={() => setLanguage('en')} 
-                    className={language === 'en' ? 'active' : ''}
-                />
-                <img 
-                    src={frLogo} 
-                    alt="FR" 
-                    title="Français"
-                    onClick={() => setLanguage('fr')} 
-                    className={language === 'fr' ? 'active' : ''}
-                />
-            </div>
-            {/* <h1>{t.title}</h1> */}
-        </div>
+        <nav className="language-selector">
+            <ul>
+                <li>
+                    <img 
+                        src={esLogo} 
+                        alt="ES" 
+                        title="Español"
+                        onClick={() => setLanguage('es')} 
+                        className={language === 'es' ? 'active' : ''}
+                    />
+                </li>
+                <li>
+                    <img 
+                        src={enLogo} 
+                        alt="EN" 
+                        title="English"
+                        onClick={() => setLanguage('en')} 
+                        className={language === 'en' ? 'active' : ''}
+                    />
+                </li>
+                <li>
+                    <img 
+                        src={frLogo} 
+                        alt="FR" 
+                        title="Français"
+                        onClick={() => setLanguage('fr')} 
+                        className={language === 'fr' ? 'active' : ''}
+                    />
+                </li>
+            </ul>
+        </nav>
     );
 };
 
