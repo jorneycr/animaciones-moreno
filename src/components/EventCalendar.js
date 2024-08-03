@@ -16,6 +16,7 @@ const EventCalendar = () => {
     const [events, setEvents] = useState(initialEvents);
     const [newEvent, setNewEvent] = useState({ title: '', date: '', type: '' });
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [validationError, setValidationError] = useState('');
 
     const getTileContent = ({ date, view }) => {
         if (view === 'month') {
@@ -42,36 +43,40 @@ const EventCalendar = () => {
 
     const handleAddEvent = (e) => {
         e.preventDefault();
-        setIsModalOpen(true);
-    };
-
-    const handleConfirmPayment = (e) => {
-        e.preventDefault();
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
 
         const now = new Date();
         const timeDifference = (eventDate - now) / (1000 * 60 * 60 * 24); // days
 
+        let errorMessage = '';
+
         if (type === 'Escolar' || type === 'Familiar') {
             if (timeDifference < 14 || timeDifference > 60) {
-                alert('Las reservas para eventos escolares y familiares deben realizarse con al menos 2 semanas y no más de 2 meses de anticipación.');
-                return;
+                errorMessage = 'Las reservas para eventos escolares y familiares deben realizarse con al menos 2 semanas y no más de 2 meses de anticipación.';
             }
         } else if (type === 'Despedida' || type === 'Social') {
             if (timeDifference < 7 || timeDifference > 30) {
-                alert('Las reservas para despedidas y eventos sociales deben realizarse con al menos 1 semana y no más de 30 días de anticipación.');
-                return;
+                errorMessage = 'Las reservas para despedidas y eventos sociales deben realizarse con al menos 1 semana y no más de 30 días de anticipación.';
             }
         } else if (type === 'Boda' || type === 'Especial') {
             if (timeDifference < 547 || timeDifference > 609) {
-                alert('Las reservas para bodas y eventos especiales deben realizarse con al menos 18 meses y no más de 20 meses de anticipación.');
-                return;
+                errorMessage = 'Las reservas para bodas y eventos especiales deben realizarse con al menos 18 meses y no más de 20 meses de anticipación.';
             }
         }
 
-        setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
-        setNewEvent({ title: '', date: '', type: '' });
+        if (errorMessage) {
+            setValidationError(errorMessage);
+        } else {
+            setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
+            setIsModalOpen(true);
+            setValidationError('');
+        }
+    };
+
+    const handleConfirmPayment = (e) => {
+        e.preventDefault();
+        // Actualiza la lógica de confirmación de pago aquí si es necesario
         setIsModalOpen(false);
     };
 
@@ -79,11 +84,16 @@ const EventCalendar = () => {
         setIsModalOpen(false);
     };
 
+    const handleDateClick = (newDate) => {
+        setDate(newDate);
+        setNewEvent(prevState => ({ ...prevState, date: newDate.toISOString().split('T')[0] }));
+    };
+
     return (
         <section className="calendar-container">
             <h1>Próximos Eventos</h1>
             <Calendar 
-                onChange={setDate}
+                onChange={handleDateClick}
                 value={date}
                 tileContent={getTileContent}
                 tileClassName={getTileClass}
@@ -115,11 +125,12 @@ const EventCalendar = () => {
                 </select>
                 <button type="submit">Agregar Evento</button>
             </form>
+            {validationError && <p className="validation-error">{validationError}</p>}
             {isModalOpen && (
                 <>
                     <div className="overlay" onClick={handleCancel}></div>
                     <div className="modal">
-                        <PaymentForm handleConfirmPayment={handleConfirmPayment} handleCancel={handleCancel} />
+                        <PaymentForm handleConfirmPayment={handleConfirmPayment} handleCancel={handleCancel} setNewEvent={setNewEvent} />
                     </div>
                 </>
             )}

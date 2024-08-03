@@ -4,7 +4,7 @@ import 'react-credit-cards-2/dist/es/styles-compiled.css';
 import './PaymentForm.css';
 
 
-const PaymentForm = ({ handleConfirmPayment, handleCancel }) => {
+const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
   const [number, setNumber] = useState('');
   const [name, setName] = useState('');
   const [focused, setFocused] = useState('');
@@ -35,6 +35,8 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel }) => {
   const handleInputFocus = (evt) => {
     setFocused(evt.target.name);
   };
+
+  // setNewEvent({ title: '', date: '', type: '' });
 
   return (
     <div className="payment-form">
