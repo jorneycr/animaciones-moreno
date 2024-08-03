@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './EventCalendar.css';
+import PaymentForm from './PaymentForm';
 
 const initialEvents = [
     { id: 1, title: 'Evento Escolar', date: new Date(2024, 7, 20), type: 'Escolar' },
@@ -14,6 +15,7 @@ const EventCalendar = () => {
     const [date, setDate] = useState(new Date());
     const [events, setEvents] = useState(initialEvents);
     const [newEvent, setNewEvent] = useState({ title: '', date: '', type: '' });
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const getTileContent = ({ date, view }) => {
         if (view === 'month') {
@@ -40,6 +42,11 @@ const EventCalendar = () => {
 
     const handleAddEvent = (e) => {
         e.preventDefault();
+        setIsModalOpen(true);
+    };
+
+    const handleConfirmPayment = (e) => {
+        e.preventDefault();
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
 
@@ -65,6 +72,11 @@ const EventCalendar = () => {
 
         setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
         setNewEvent({ title: '', date: '', type: '' });
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
     };
 
     return (
@@ -103,6 +115,14 @@ const EventCalendar = () => {
                 </select>
                 <button type="submit">Agregar Evento</button>
             </form>
+            {isModalOpen && (
+                <>
+                    <div className="overlay" onClick={handleCancel}></div>
+                    <div className="modal">
+                        <PaymentForm handleConfirmPayment={handleConfirmPayment} handleCancel={handleCancel} />
+                    </div>
+                </>
+            )}
         </section>
     );
 };
