@@ -7,4 +7,20 @@
     align-items: center;
     padding: 0;
     text-align: center;  
+    height: 400px;
+}
+
+.modal {
+    height: 650px;
+}
+
+.validation-error {
+    color: #d9534f; /* Color rojo para el texto */
+    background-color: #f2dede; /* Fondo ligeramente rosado para el error */
+    border: 1px solid #d9534f; /* Borde rojo */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    font-weight: bold; /* Fuente en negrita */
+    text-align: center; /* Alineación centrada */
 }

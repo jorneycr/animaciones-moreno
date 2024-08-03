@@ -46,6 +46,9 @@ const EventCalendar = () => {
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
 
+        // Set time to start of the day (00:00:00) to avoid timezone issues
+        eventDate.setHours(0, 0, 0, 0);
+
         const now = new Date();
         const timeDifference = (eventDate - now) / (1000 * 60 * 60 * 24); // days
 
@@ -68,15 +71,27 @@ const EventCalendar = () => {
         if (errorMessage) {
             setValidationError(errorMessage);
         } else {
-            setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
-            setIsModalOpen(true);
             setValidationError('');
+            setIsModalOpen(true);
         }
     };
 
     const handleConfirmPayment = (e) => {
         e.preventDefault();
-        // Actualiza la lógica de confirmación de pago aquí si es necesario
+
+        // Agregar el nuevo evento a la lista de eventos
+        const { title, date, type } = newEvent;
+        const eventDate = new Date(date);
+
+        // Set time to start of the day (00:00:00) to avoid timezone issues
+        eventDate.setHours(0, 0, 0, 0);
+
+        setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
+        
+        // Limpiar el formulario de nuevo evento
+        setNewEvent({ title: '', date: '', type: '' });
+
+        // Cerrar el modal de pago
         setIsModalOpen(false);
     };
 
@@ -85,8 +100,12 @@ const EventCalendar = () => {
     };
 
     const handleDateClick = (newDate) => {
-        setDate(newDate);
-        setNewEvent(prevState => ({ ...prevState, date: newDate.toISOString().split('T')[0] }));
+        const date = new Date(newDate);
+        // Set time to start of the day (00:00:00) to avoid timezone issues
+        date.setHours(0, 0, 0, 0);
+
+        setDate(date);
+        setNewEvent(prevState => ({ ...prevState, date: date.toISOString().split('T')[0] }));
     };
 
     return (
@@ -128,10 +147,14 @@ const EventCalendar = () => {
             {validationError && <p className="validation-error">{validationError}</p>}
             {isModalOpen && (
                 <>
-                    <div className="overlay" onClick={handleCancel}></div>
-                    <div className="modal">
-                        <PaymentForm handleConfirmPayment={handleConfirmPayment} handleCancel={handleCancel} setNewEvent={setNewEvent} />
-                    </div>
+                    <section className="overlay" onClick={handleCancel}></section>
+                    <section className="modal">
+                        <PaymentForm 
+                            handleConfirmPayment={handleConfirmPayment} 
+                            handleCancel={handleCancel} 
+                            setNewEvent={setNewEvent} 
+                        />
+                    </section>
                 </>
             )}
         </section>

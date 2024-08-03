@@ -91,7 +91,7 @@ const Reviews = () => {
             </section>
 
             {showModal && (
-                <section className="modal">
+                <section className="modal-review">
                     <section className="modal-content">
                         <span className="close" onClick={() => setShowModal(false)}>
                             &times;
