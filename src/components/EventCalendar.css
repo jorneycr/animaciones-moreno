@@ -116,7 +116,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar
     color: #757575;
 }
 
-.overlay {
+.overlayPayment {
     position: fixed;
     top: 0;
     left: 0;
@@ -126,7 +126,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar
     z-index: 999;
 }
 
-.modal {
+.modalPayment {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -140,24 +140,24 @@ button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar
     width: 90%;
 }
 
-.modal h2 {
+.modalPayment h2 {
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-.modal form {
+.modalPayment form {
     display: flex;
     flex-direction: column;
 }
 
-.modal form input {
+.modalPayment form input {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.modal form button {
+.modalPayment form button {
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -167,7 +167,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar
     color: white;
 }
 
-.modal form button:hover {
+.modalPayment form button:hover {
     background-color: #215E6F;
 }
 
@@ -207,13 +207,13 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__next2-butto
     background: lightslategray;
 }
 .validation-error {
-    color: #d9534f; /* Color rojo para el texto */
-    background-color: #f2dede; /* Fondo ligeramente rosado para el error */
-    border: 1px solid #d9534f; /* Borde rojo */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    margin-top: 10px; /* Espaciado superior */
-    font-weight: bold; /* Fuente en negrita */
-    text-align: center; /* Alineación centrada */
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 

@@ -10,9 +10,6 @@
     height: 400px;
 }
 
-.modal {
-    height: 650px;
-}
 
 .validation-error {
     color: #d9534f; /* Color rojo para el texto */

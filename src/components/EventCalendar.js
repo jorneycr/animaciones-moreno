@@ -46,9 +46,6 @@ const EventCalendar = () => {
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
 
-        // Set time to start of the day (00:00:00) to avoid timezone issues
-        eventDate.setHours(0, 0, 0, 0);
-
         const now = new Date();
         const timeDifference = (eventDate - now) / (1000 * 60 * 60 * 24); // days
 
@@ -83,9 +80,6 @@ const EventCalendar = () => {
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
 
-        // Set time to start of the day (00:00:00) to avoid timezone issues
-        eventDate.setHours(0, 0, 0, 0);
-
         setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
         
         // Limpiar el formulario de nuevo evento
@@ -101,8 +95,6 @@ const EventCalendar = () => {
 
     const handleDateClick = (newDate) => {
         const date = new Date(newDate);
-        // Set time to start of the day (00:00:00) to avoid timezone issues
-        date.setHours(0, 0, 0, 0);
 
         setDate(date);
         setNewEvent(prevState => ({ ...prevState, date: date.toISOString().split('T')[0] }));
@@ -147,8 +139,8 @@ const EventCalendar = () => {
             {validationError && <p className="validation-error">{validationError}</p>}
             {isModalOpen && (
                 <>
-                    <section className="overlay" onClick={handleCancel}></section>
-                    <section className="modal">
+                    <section className="overlayPayment" onClick={handleCancel}></section>
+                    <section className="modalPayment">
                         <PaymentForm 
                             handleConfirmPayment={handleConfirmPayment} 
                             handleCancel={handleCancel} 
