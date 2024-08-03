@@ -33,7 +33,7 @@ const EventCalendar = () => {
     };
 
     return (
-        <div className="calendar-container">
+        <section className="calendar-container">
             <h1>Próximos Eventos</h1>
             <Calendar 
                 onChange={setDate}
@@ -41,7 +41,7 @@ const EventCalendar = () => {
                 tileContent={getTileContent}
                 tileClassName={getTileClass}
             />
-        </div>
+        </section>
     );
 };
 

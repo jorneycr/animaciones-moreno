@@ -26,6 +26,7 @@ import familiares from './assets/images/home/familiares.jpg';
 import graduaciones from './assets/images/home/graduaciones.jpg';
 import cumpleanos from './assets/images/home/cumpleanos.jpg';
 import BlogPost from './components/BlogPost';
+import ForgotPassword from './pages/Login/ForgotPassword';
 
 function App() {
     const [services, setServices] = useState([]);
@@ -169,6 +170,7 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/post/:id" element={<BlogPost />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/reviews" element={<Reviews />} />
                     <Route path="/gallery" element={<GalleryAll />} />
