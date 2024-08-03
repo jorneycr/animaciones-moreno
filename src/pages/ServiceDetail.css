@@ -88,3 +88,17 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+.not-found {
+    text-align: center;
+    padding: 2rem;
+}
+
+.not-found h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.not-found p {
+    margin-bottom: 1rem;
+}

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './GalleryAll.css';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const images = [
     { id: 1, src: 'https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_1280.jpg', alt: 'Despedidas 1' },
@@ -28,17 +29,18 @@ const images = [
     { id: 24, src: 'https://cdn.pixabay.com/photo/2023/06/21/20/05/party-8080105_1280.jpg', alt: 'Cumpleaños 4' }
 ];
 
-
 const GalleryAll = () => {
+    const { t } = useContext(LanguageContext);
+
     return (
-        <div className="gallery">
-            <h1>Galería de Eventos</h1>
-            <div className="image-grid">
+        <section className="gallery">
+            <h1>{t['gallery_all_title']}</h1>
+            <section className="image-grid">
                 {images.map(image => (
                     <img key={image.id} src={image.src} alt={image.alt} />
                 ))}
-            </div>
-        </div>
+            </section>
+        </section>
     );
 };
 

@@ -28,15 +28,15 @@ const HeroSlider = () => {
     return (
         <Slider {...settings} className="hero-slider">
             {slides.map((slide, index) => (
-                <div key={index}>
-                    <div 
+                <section key={index}>
+                    <section 
                         className="hero-slide" 
                         style={{ backgroundImage: `url(${slide.src})` }}
                     >
-                        <div className="hero-text">Animaciones Moreno</div>
+                        <section className="hero-text">Animaciones Moreno</section>
                         <img src={slide.src} alt={slide.alt} style={{ display: 'block' }} />
-                    </div>
-                </div>
+                    </section>
+                </section>
             ))}
         </Slider>
     );

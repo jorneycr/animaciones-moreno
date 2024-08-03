@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './QuotePage.css';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 function QuotePage({ services }) {
   const { slug } = useParams();
   const [selectedService, setSelectedService] = useState(null);
+  const { t } = useContext(LanguageContext);
 
   useEffect(() => {
     const service = services.find(s => s.slug === slug);
@@ -23,45 +25,45 @@ function QuotePage({ services }) {
       message: ''
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Nombre es requerido'),
-      email: Yup.string().email('Email no válido').required('Email es requerido'),
-      phone: Yup.string().required('Teléfono es requerido'),
-      budget: Yup.number().required('Presupuesto es requerido').positive('Debe ser un número positivo'),
-      location: Yup.string().required('Ubicación es requerida'),
-      message: Yup.string().required('Mensaje es requerido'),
+      name: Yup.string().required(t['quote_name_required']),
+      email: Yup.string().email(t['quote_email_invalid']).required(t['quote_email_required']),
+      phone: Yup.string().required(t['quote_phone_required']),
+      budget: Yup.number().required(t['quote_budget_required']).positive(t['quote_budget_positive']),
+      location: Yup.string().required(t['quote_location_required']),
+      message: Yup.string().required(t['quote_message_required']),
     }),
     onSubmit: values => {
       console.log(values);
-      alert('Formulario enviado');
+      alert(t['quote_form_submitted']);
     },
   });
 
   if (!selectedService) {
     return (
-      <div className="not-found">
-        <h1>Servicio no encontrado</h1>
-        <p>Lo sentimos, no pudimos encontrar el servicio que estás buscando.</p>
-        <Link to="/" className="back-home">Volver a Inicio</Link>
-      </div>
+      <section className="not-found">
+        <h1>{t['quote_service_not_found_title']}</h1>
+        <p>{t['quote_service_not_found_message']}</p>
+        <Link to="/" className="back-home">{t['quote_back_home']}</Link>
+      </section>
     );
   }
 
   return (
     <main className="main-content">
-      <div className="service-section">
-        <div className="service-image-placeholder">
+      <section className="service-section">
+        <figure className="service-image-placeholder">
           <img src={selectedService.image} alt={selectedService.name} />
-        </div>
-        <div className="service-details">
+        </figure>
+        <section className="service-details">
           <h2>{selectedService.name.toUpperCase()}</h2>
           <p>{selectedService.description}</p>
-          <h4>DETALLES</h4>
+          <h4>{t['quote_details_title']}</h4>
           {selectedService.menu.map((item, index) => (
-                        <p key={index}>{item}</p>
-                    ))}
-        </div>
-      </div>
-      <div className="form-section">
+            <p key={index}>{item}</p>
+          ))}
+        </section>
+      </section>
+      <section className="form-section">
         <form className="appointment-form" onSubmit={formik.handleSubmit}>
           <select value={selectedService.name} disabled>
             <option>{selectedService.name}</option>
@@ -69,72 +71,72 @@ function QuotePage({ services }) {
           <input
             type="text"
             name="name"
-            placeholder="Nombre"
+            placeholder={t['quote_name_placeholder']}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
           />
           {formik.touched.name && formik.errors.name ? (
-            <div className="error">{formik.errors.name}</div>
+            <section className="error">{formik.errors.name}</section>
           ) : null}
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={t['quote_email_placeholder']}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
           />
           {formik.touched.email && formik.errors.email ? (
-            <div className="error">{formik.errors.email}</div>
+            <section className="error">{formik.errors.email}</section>
           ) : null}
           <input
             type="text"
             name="phone"
-            placeholder="Teléfono"
+            placeholder={t['quote_phone_placeholder']}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.phone}
           />
           {formik.touched.phone && formik.errors.phone ? (
-            <div className="error">{formik.errors.phone}</div>
+            <section className="error">{formik.errors.phone}</section>
           ) : null}
           <input
             type="number"
             name="budget"
-            placeholder="Presupuesto"
+            placeholder={t['quote_budget_placeholder']}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.budget}
           />
           {formik.touched.budget && formik.errors.budget ? (
-            <div className="error">{formik.errors.budget}</div>
+            <section className="error">{formik.errors.budget}</section>
           ) : null}
           <input
             type="text"
             name="location"
-            placeholder="Ubicación"
+            placeholder={t['quote_location_placeholder']}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.location}
           />
           {formik.touched.location && formik.errors.location ? (
-            <div className="error">{formik.errors.location}</div>
+            <section className="error">{formik.errors.location}</section>
           ) : null}
           <textarea
             name="message"
-            placeholder="Mensaje"
+            placeholder={t['quote_message_placeholder']}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}
             rows="5"
           ></textarea>
           {formik.touched.message && formik.errors.message ? (
-            <div className="error">{formik.errors.message}</div>
+            <section className="error">{formik.errors.message}</section>
           ) : null}
-          <button type="submit">ENVIAR</button>
+          <button type="submit">{t['quote_submit_button']}</button>
         </form>
-      </div>
+      </section>
     </main>
   );
 }

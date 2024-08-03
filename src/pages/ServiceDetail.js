@@ -1,14 +1,23 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { LanguageContext } from '../contexts/LanguageContext';
 import './ServiceDetail.css';
 
 const ServiceDetail = ({ services }) => {
     const { slug } = useParams();
     const navigate = useNavigate();
+    const { t } = useContext(LanguageContext);
     const service = services.find(s => s.slug === slug);
 
     if (!service) {
-        return <div>Servicio no encontrado</div>;
+        return (
+            <section className="not-found">
+                <h1>{t['serviceDetail_notFound']}</h1>
+                <p>{t['quote_service_not_found_message']}</p>
+                <Link to="/" className="back-home">{t['quote_back_home']}</Link>
+            </section>
+        );
     }
 
     const handleQuoteClick = () => {
@@ -17,31 +26,31 @@ const ServiceDetail = ({ services }) => {
 
     return (
         <section className="service-detail">
-            <div className="service-header">
-                <div className="service-image">
+            <section className="service-header">
+                <section className="service-image">
                     <img src={service.image} alt={service.name} />
-                </div>
-                <div className="service-info">
+                </section>
+                <section className="service-info">
                     <h1>{service.name}</h1>
                     <p>{service.description}</p>
-                </div>
-            </div>
-            <div className="service-gallery">
+                </section>
+            </section>
+            <section className="service-gallery">
                 {service.gallery.map((img, index) => (
-                    <img key={index} src={img} alt={`Gallery Image ${index + 1}`} />
+                    <img key={index} src={img} alt={`Gallery item ${index + 1}`} />
                 ))}
-            </div>
-            <div className="service-menu">
-                <h2>Información del servicio de {service.name}</h2>
-                <div className="menu-info">
+            </section>
+            <section className="service-menu">
+                <h2>{t['serviceDetail_information']} {service.name}</h2>
+                <section className="menu-info">
                     {service.menu.map((item, index) => (
                         <p key={index}>{item}</p>
                     ))}
-                </div>
-            </div>
-            <div className="quote-button">
-                <button className='cta-button' onClick={handleQuoteClick}>Cotizar Servicio</button>
-            </div>
+                </section>
+            </section>
+            <section className="quote-button">
+                <button className='cta-button' onClick={handleQuoteClick}>{t['serviceDetail_quoteButton']}</button>
+            </section>
         </section>
     );
 };

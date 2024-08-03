@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../contexts/LanguageContext';
 import "./termsAndPrivacy.css";
 
-
 const TermsOfUse = () => {
-  return (
-    <div className="terms-of-use">
-      <h1 style={{textAlign:'center'}}>Términos de Uso</h1>
-      <p>Bienvenido a Animaciones Moreno. Al utilizar nuestro sitio web, usted acepta cumplir con los siguientes términos y condiciones:</p>
-      
-      <h2>1. Uso del Sitio</h2>
-      <p>El acceso y uso del sitio web de Animaciones Moreno es únicamente para propósitos legales y personales. No está permitido usar el sitio para cualquier actividad ilícita o que infrinja los derechos de terceros.</p>
-      
-      <h2>2. Servicios Ofrecidos</h2>
-      <p>Animaciones Moreno ofrece una gama de servicios para eventos, incluyendo animación, catering, decoración, música y alquiler de salones. Los detalles específicos de cada servicio se encuentran en las respectivas secciones del sitio web.</p>
+  const { t } = useContext(LanguageContext);
 
-      <h2>3. Contacto</h2>
-      <p>Si tiene alguna pregunta sobre estos términos de uso, por favor contáctenos a través de nuestro formulario de contacto.</p>
+  return (
+    <section className="terms-of-use">
+      <h1 style={{textAlign:'center'}}>{t['terms_of_use_title']}</h1>
+      <p>{t['terms_of_use_intro']}</p>
       
-      <p>Última actualización: [2024]</p>
-    </div>
+      <h2>{t['terms_of_use_section_1_title']}</h2>
+      <p>{t['terms_of_use_section_1_content']}</p>
+      
+      <h2>{t['terms_of_use_section_2_title']}</h2>
+      <p>{t['terms_of_use_section_2_content']}</p>
+
+      <h2>{t['terms_of_use_section_3_title']}</h2>
+      <p>{t['terms_of_use_section_3_content']}</p>
+      
+      <p>{t['terms_of_use_last_update']}</p>
+    </section>
   );
 };
 

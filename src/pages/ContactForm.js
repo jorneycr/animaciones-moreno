@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './ContactForm.css';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const ContactForm = () => {
+  const { t } = useContext(LanguageContext);
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -13,18 +16,18 @@ const ContactForm = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
-        .max(50, 'El nombre debe tener 50 caracteres o menos')
-        .required('El nombre es requerido'),
+        .max(50, t['contact_name_max'])
+        .required(t['contact_name_required']),
       email: Yup.string()
-        .email('El correo electrónico no es válido')
-        .required('El correo electrónico es requerido'),
+        .email(t['contact_email_invalid'])
+        .required(t['contact_email_required']),
       phone: Yup.string()
-        .matches(/^[0-9]+$/, 'El número de teléfono solo puede contener dígitos')
-        .min(10, 'El número de teléfono debe tener al menos 10 dígitos')
-        .required('El número de teléfono es requerido'),
+        .matches(/^[0-9]+$/, t['contact_phone_digits'])
+        .min(10, t['contact_phone_min'])
+        .required(t['contact_phone_required']),
       message: Yup.string()
-        .max(500, 'El mensaje debe tener 500 caracteres o menos')
-        .required('El mensaje es requerido'),
+        .max(500, t['contact_message_max'])
+        .required(t['contact_message_required']),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -33,7 +36,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={formik.handleSubmit} className="contact-form-animaciones">
-      <label htmlFor="name" className="contact-form-animaciones-label">Nombre</label>
+      <label htmlFor="name" className="contact-form-animaciones-label">{t['contact_name_label']}</label>
       <input
         id="name"
         name="name"
@@ -47,7 +50,7 @@ const ContactForm = () => {
         <span className="contact-form-animaciones-error-message">{formik.errors.name}</span>
       ) : null}
 
-      <label htmlFor="email" className="contact-form-animaciones-label">Correo Electrónico</label>
+      <label htmlFor="email" className="contact-form-animaciones-label">{t['contact_email_label']}</label>
       <input
         id="email"
         name="email"
@@ -61,7 +64,7 @@ const ContactForm = () => {
         <span className="contact-form-animaciones-error-message">{formik.errors.email}</span>
       ) : null}
 
-      <label htmlFor="phone" className="contact-form-animaciones-label">Número de Teléfono</label>
+      <label htmlFor="phone" className="contact-form-animaciones-label">{t['contact_phone_label']}</label>
       <input
         id="phone"
         name="phone"
@@ -75,7 +78,7 @@ const ContactForm = () => {
         <span className="contact-form-animaciones-error-message">{formik.errors.phone}</span>
       ) : null}
 
-      <label htmlFor="message" className="contact-form-animaciones-label">Mensaje</label>
+      <label htmlFor="message" className="contact-form-animaciones-label">{t['contact_message_label']}</label>
       <textarea
         id="message"
         name="message"
@@ -88,7 +91,7 @@ const ContactForm = () => {
         <span className="contact-form-animaciones-error-message">{formik.errors.message}</span>
       ) : null}
 
-      <button type="submit" className="contact-form-animaciones-button">Enviar</button>
+      <button type="submit" className="contact-form-animaciones-button">{t['contact_submit_button']}</button>
     </form>
   );
 };

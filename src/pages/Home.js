@@ -1,4 +1,3 @@
-// Home.js
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -10,54 +9,54 @@ const Home = ({ services }) => {
 
     return (
         <>
-            <HeroSlider/>
+            <HeroSlider />
 
             <section id='services' className="services">
-                <h2>{t.homeTitle}</h2>
-                <div className="service-cards">
+                <h2>{t['home_homeTitle']}</h2>
+                <section className="service-cards">
                     {services.map(service => (
                         <Link to={`/service/${service.slug}`} key={service.slug}>
-                            <div className="service-card">
+                            <section className="service-card">
                                 <img src={service.icon} alt={`${service.name} Icon`} />
                                 <h3>{service.name}</h3>
                                 <p>{service.description}</p>
-                            </div>
+                            </section>
                         </Link>
                     ))}
-                </div>
+                </section>
             </section>
 
             <section className="review">
-                <h2>{t.reviews}</h2>
-                <p>{t.readReviews}</p>
+                <h2>{t['home_reviews']}</h2>
+                <p>{t['home_readReviews']}</p>
                 <button className="cta-button">
-                    <Link to="/reviews">{t.viewReviews}</Link>
+                    <Link to="/reviews">{t['home_viewReviews']}</Link>
                 </button>
             </section>
 
             <section className="gallery">
-                <h2>{t.gallery}</h2>
-                <p>{t.exploreGallery}</p>
+                <h2>{t['home_gallery']}</h2>
+                <p>{t['home_exploreGallery']}</p>
                 <button className="cta-button">
-                    <Link to="/gallery">{t.viewGallery}</Link>
+                    <Link to="/gallery">{t['home_viewGallery']}</Link>
                 </button>
             </section>
 
             <section className="personal-directory">
-                <h2>{t.personalDirectory}</h2>
-                <p>{t.meetTeam}</p>
+                <h2>{t['home_personalDirectory']}</h2>
+                <p>{t['home_meetTeam']}</p>
                 <button className="cta-button">
-                    <Link to="/personal-directory">{t.viewDirectory}</Link>
+                    <Link to="/personal-directory">{t['home_viewDirectory']}</Link>
                 </button>
             </section>
 
             <section className="contact">
-                <p>{t.callUs} <strong>(800) 8888-8888</strong></p>
-                <div className="locations">
-                    <h4>{t.locations}</h4>
-                    <p>{t.locationList}</p>
-                </div>
-                <button className="cta-button"><Link to="/contact">{t.contact}</Link></button>
+                <p>{t['home_callUs']} <strong>(800) 8888-8888</strong></p>
+                <section className="locations">
+                    <h4>{t['home_locations']}</h4>
+                    <p>{t['home_locationList']}</p>
+                </section>
+                <button className="cta-button"><Link to="/contact">{t['home_contact']}</Link></button>
             </section>
         </>
     );

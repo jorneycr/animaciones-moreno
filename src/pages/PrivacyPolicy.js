@@ -1,26 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../contexts/LanguageContext';
 import "./termsAndPrivacy.css";
 
 const PrivacyPolicy = () => {
+  const { t } = useContext(LanguageContext);
+
   return (
-    <div className="privacy-policy">
-      <h1 style={{textAlign:'center'}}>Política de Privacidad</h1>
-      <p>En Animaciones Moreno, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos su información personal.</p>
+    <section className="privacy-policy">
+      <h1 style={{textAlign:'center'}}>{t['privacy_policy_title']}</h1>
+      <p>{t['privacy_policy_intro']}</p>
       
-      <h2>1. Información que Recopilamos</h2>
-      <p>Recopilamos información personal que usted nos proporciona al usar nuestro sitio, como su nombre, dirección de correo electrónico y número de teléfono. También podemos recopilar información sobre su uso del sitio a través de cookies y otras tecnologías de seguimiento.</p>
+      <h2>{t['privacy_policy_section_1_title']}</h2>
+      <p>{t['privacy_policy_section_1_content']}</p>
       
-      <h2>2. Uso de la Información</h2>
-      <p>Utilizamos su información personal para proporcionarle nuestros servicios, responder a sus consultas y mejorar nuestra oferta de servicios. También podemos utilizar su información para enviarle comunicaciones promocionales, siempre y cuando usted haya dado su consentimiento.</p>
+      <h2>{t['privacy_policy_section_2_title']}</h2>
+      <p>{t['privacy_policy_section_2_content']}</p>
       
-      <h2>3. Compartir Información</h2>
-      <p>No compartimos su información personal con terceros, excepto en los casos necesarios para cumplir con la ley, proteger nuestros derechos o proporcionar los servicios solicitados por usted.</p>
+      <h2>{t['privacy_policy_section_3_title']}</h2>
+      <p>{t['privacy_policy_section_3_content']}</p>
       
-      <h2>4. Contacto</h2>
-      <p>Si tiene alguna pregunta sobre esta política de privacidad, por favor contáctenos a través de nuestro formulario de contacto.</p>
+      <h2>{t['privacy_policy_section_4_title']}</h2>
+      <p>{t['privacy_policy_section_4_content']}</p>
       
-      <p>Última actualización: [2024]</p>
-    </div>
+      <p>{t['privacy_policy_last_update']}</p>
+    </section>
   );
 };
 

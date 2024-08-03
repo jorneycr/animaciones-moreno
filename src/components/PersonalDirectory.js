@@ -1,42 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../contexts/LanguageContext';
 import './PersonalDirectory.css';
 
 const teamMembers = [
-    { id: 1, name: 'Laura Castillo', position: 'Gerente de Ventas', description: 'Experta en estrategias de ventas.' },
-    { id: 2, name: 'José Rodríguez', position: 'Coordinador de Eventos', description: 'Especialista en planificación de eventos.' },
-    { id: 3, name: 'María González', position: 'Chef Principal', description: 'Creadora de menús personalizados.' },
-    // Agrega más miembros del equipo según sea necesario
+    { id: 1, name: 'Juan Moreno', position: 'Administrador' },
+    { id: 2, name: 'Maria López', position: 'Coordinadora' },
+    { id: 3, name: 'Carlos Gómez', position: 'Animador' },
 ];
 
 const PersonalDirectory = () => {
+    const { t } = useContext(LanguageContext);
+
     return (
         <section className="personal-directory">
-            <h2>Directorio Personal</h2>
-            <p>Contamos con un equipo diverso y talentoso que se especializa en diferentes áreas de la animación y la organización de eventos. Desde DJ's y animadores, hasta coordinadores y diseñadores, todos estamos dedicados a brindarte el mejor servicio.</p>
+            <h2>{t['personal_directory_title']}</h2>
+            <p>{t['personal_directory_description']}</p>
             <section className="team-gallery">
-                <section className="team-member">
-                    <section className="team-photo photo1"></section>
-                    <p>Juan Moreno - Administrador</p>
-                </section>
-                <section className="team-member">
-                    <section className="team-photo photo2"></section>
-                    <p>Maria López - Coordinadora</p>
-                </section>
-                <section className="team-member">
-                    <section className="team-photo photo3"></section>
-                    <p>Carlos Gómez - Animador</p>
-                </section>
-            </section>
-            {/* <ul>
-                
                 {teamMembers.map(member => (
-                    <li key={member.id}>
-                        <h3>{member.name}</h3>
-                        <p><strong>{member.position}</strong></p>
-                        <p>{member.description}</p>
-                    </li>
+                    <section key={member.id} className="team-member">
+                        <section className={`team-photo photo${member.id}`}></section>
+                        <p>{t[`team_member_${member.id}_name`]} - {t[`team_member_${member.id}_position`]}</p>
+                    </section>
                 ))}
-            </ul> */}
+            </section>
         </section>
     );
 };

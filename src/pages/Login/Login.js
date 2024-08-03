@@ -17,11 +17,11 @@ function Login() {
 
   return (
     <section className="login">
-      <div className={containerClass} id="container">
+      <section className={containerClass} id="container">
         <SignUpForm />
         <SignInForm />
         <aside className="overlay-container">
-          <div className="overlay">
+          <section className="overlay">
             <section className="overlay-panel overlay-left">
               <h1 style={{color:'#FFF'}}>¡Bienvenido de nuevo!</h1>
               <p style={{color:'#FFF'}}>
@@ -36,8 +36,8 @@ function Login() {
               </button>
             </section>
             <section className="overlay-panel overlay-right">
-              <h1>¡Hola, amigo!</h1>
-              <p>Ingresa tus datos personales y comienza tu viaje con nosotros.</p>
+              <h1 style={{color:'#FFF'}}>¡Hola, amigo!</h1>
+              <p style={{color:'#FFF'}}>Ingresa tus datos personales y comienza tu viaje con nosotros.</p>
               <button
                 className="ghost"
                 id="signUp"
@@ -46,9 +46,9 @@ function Login() {
                 Registrarse
               </button>
             </section>
-          </div>
+          </section>
         </aside>
-      </div>
+      </section>
     </section>
   );
 }
