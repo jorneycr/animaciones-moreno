@@ -18,6 +18,7 @@ import Blog from './components/Blog';
 import Reviews from './components/Reviews';
 import GalleryAll from './components/GalleryAll';
 import PersonalDirectory from './components/PersonalDirectory';
+import EventCalendar from './components/EventCalendar';
 
 import despedidas from './assets/images/home/despedidas.jpg';
 import escolares from './assets/images/home/escolares.jpg';
@@ -171,6 +172,7 @@ function App() {
                     <Route path="/post/:id" element={<BlogPost />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/forgot-password" element={<ForgotPassword />} />
+                    <Route path="/calendar" element={<EventCalendar />} />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/reviews" element={<Reviews />} />
                     <Route path="/gallery" element={<GalleryAll />} />

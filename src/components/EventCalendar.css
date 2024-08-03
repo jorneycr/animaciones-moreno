@@ -3,49 +3,142 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 5% auto;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.calendar-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .calendar-container h1 {
     color: #333;
     margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
 .react-calendar {
     width: 100%;
     border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .react-calendar__tile {
     text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.react-calendar__tile:hover {
+    transform: scale(1.1);
 }
 
 .react-calendar__tile p {
     margin: 0;
     padding: 5px;
+    border-radius: 50%;
 }
 
-.highlight-escolar .react-calendar__tile {
+.highlight-escolar {
     background-color: #ffc107;
-    border-radius: 5px;
+    border-radius: 50%;
     color: white;
 }
 
-.highlight-familiar .react-calendar__tile {
+.highlight-familiar {
     background-color: #28a745;
-    border-radius: 5px;
+    border-radius: 50%;
     color: white;
 }
 
-.highlight-despedida .react-calendar__tile {
+.highlight-despedida {
     background-color: #17a2b8;
-    border-radius: 5px;
+    border-radius: 50%;
     color: white;
 }
 
-.highlight-boda .react-calendar__tile {
+.highlight-boda {
     background-color: #dc3545;
-    border-radius: 5px;
+    border-radius: 50%;
     color: white;
+}
+
+.highlight-graduación {
+    background-color: #6f42c1;
+    border-radius: 50%;
+    color: white;
+}
+
+.highlight-cumpleaños {
+    background-color: #fd7e14;
+    border-radius: 50%;
+    color: white;
+}
+
+.event-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.event-form input, .event-form select, .event-form button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+}
+
+.event-form button {
+    background-color: #009AA0;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.event-form button:hover {
+    background-color: #215E6F;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
+    color: #666;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day {
+    color: #666;
+}
+
+button.react-calendar__navigation__label {
+    background: #ff6b6b;
+}
+
+button.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day {
+    background: #ff6b6b;
+}
+
+.react-calendar__year-view__months {
+    background: lightslategray;
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+    background: lightslategray;
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+    background: lightslategray;
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+    background: lightslategray;
+}
+button.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+    background: lightslategray;
 }
