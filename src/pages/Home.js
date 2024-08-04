@@ -35,10 +35,10 @@ const Home = ({ services }) => {
             </section>
 
             <section className="gallery">
-                <h2>{t['home_gallery']}</h2>
-                <p>{t['home_exploreGallery']}</p>
+                <h2>{t['home_eventCalendar']}</h2>
+                <p>{t['home_exploreEventCalendar']}</p>
                 <button className="cta-button">
-                    <Link to="/gallery">{t['home_viewGallery']}</Link>
+                    <Link to="/calendar">{t['home_viewEventCalendar']}</Link>
                 </button>
             </section>
 
@@ -47,6 +47,14 @@ const Home = ({ services }) => {
                 <p>{t['home_meetTeam']}</p>
                 <button className="cta-button">
                     <Link to="/personal-directory">{t['home_viewDirectory']}</Link>
+                </button>
+            </section>
+
+            <section className="gallery">
+                <h2>{t['home_gallery']}</h2>
+                <p>{t['home_exploreGallery']}</p>
+                <button className="cta-button">
+                    <Link to="/gallery">{t['home_viewGallery']}</Link>
                 </button>
             </section>
 
