@@ -6,8 +6,9 @@ This project was bootstrapped with [Create Animaciones Moreno](https://github.co
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install`
 
+### `npm start`
 
 ### `npm run build`
 
