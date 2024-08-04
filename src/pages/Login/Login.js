@@ -21,7 +21,7 @@ function Login() {
         <SignUpForm />
         <SignInForm />
         <aside className="overlay-container">
-          <section className="overlayLogin">
+          <section className="overlay">
             <section className="overlay-panel overlay-left">
               <h1 style={{color:'#FFF'}}>¡Bienvenido de nuevo!</h1>
               <p style={{color:'#FFF'}}>
