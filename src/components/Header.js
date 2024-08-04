@@ -22,7 +22,7 @@ const Header = () => {
                 <Link to="/contact">{t['header_contact']}</Link>
                 <Link to="/blog">{t['header_blog']}</Link>
                 {user ? (
-                    <Link>Bienvenido, {user.user}</Link>
+                    <Link to="/settings">Bienvenido, {user.user}</Link>
                 ) : (
                     <Link to="/login">{t['header_login']}</Link>
                 )}

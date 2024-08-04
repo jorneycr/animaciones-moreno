@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import './EventCalendar.css';
-import PaymentForm from './PaymentForm';
 import { LanguageContext } from '../contexts/LanguageContext';
+import { useUser } from '../contexts/UserContext';
+import PaymentForm from './PaymentForm';
+import './EventCalendar.css';
+import 'react-calendar/dist/Calendar.css';
 
 const initialEvents = [
     { id: 1, title: 'Evento Escolar', date: new Date(2024, 7, 20), type: 'Escolar' },
@@ -19,6 +20,8 @@ const EventCalendar = () => {
     const [newEvent, setNewEvent] = useState({ title: '', date: '', type: '' });
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [validationError, setValidationError] = useState('');
+
+    const { user } = useUser();
 
     const getTileContent = ({ date, view }) => {
         if (view === 'month') {
@@ -111,7 +114,8 @@ const EventCalendar = () => {
                 tileContent={getTileContent}
                 tileClassName={getTileClass}
             />
-            <form className="event-form" onSubmit={handleAddEvent}>
+            {user && (user.role === "admin" || user.role === "coordinador" || user.role === "cliente") && (
+                <form className="event-form" onSubmit={handleAddEvent}>
                 <input 
                     type="text" 
                     name="title" 
@@ -138,6 +142,8 @@ const EventCalendar = () => {
                 </select>
                 <button type="submit">{t['calendar_addEvent']}</button>
             </form>
+            )}
+            
             {validationError && <p className="validation-error">{validationError}</p>}
             {isModalOpen && (
                 <>
