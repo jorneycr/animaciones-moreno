@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './Reviews.css';
 import { LanguageContext } from '../contexts/LanguageContext';
+import { useUser } from '../contexts/UserContext';
 
 const reviewsData = [
     {
@@ -32,6 +33,7 @@ const Reviews = () => {
     const [reviewsList, setReviews] = useState(reviewsData);
     const [showModal, setShowModal] = useState(false);
     const { t } = useContext(LanguageContext);
+    const { user } = useUser();
 
     const initialValues = {
         name: '',
@@ -84,11 +86,14 @@ const Reviews = () => {
                     <p>{review.comment}</p>
                 </section>
             ))}
-            <section className='buttonReview'>
-                <button className="review-add-button" onClick={() => setShowModal(true)}>
-                    {t['reviews_addButton']}
-                </button>
-            </section>
+            {user && (user.role === "admin" || user.role === "coordinador" || user.role === "cliente") && (
+                <section className='buttonReview'>
+                    <button className="review-add-button" onClick={() => setShowModal(true)}>
+                        {t['reviews_addButton']}
+                    </button>
+                </section>
+            )}
+
 
             {showModal && (
                 <section className="modal-review">

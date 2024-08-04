@@ -2,7 +2,7 @@
 .admin-panel {
     padding: 20px;
     background-color: #F9F8C5;
-        text-align: center; /* Centra el contenido */
+    text-align: center; /* Centra el contenido */
 }
 
 .admin-panel h1 {
@@ -11,16 +11,25 @@
     margin-bottom: 20px;
 }
 
+/* Contenedor de secciones en formato flexbox */
+.sections-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espacio entre secciones */
+}
+
 .admin-section, .coordinator-section, .customer-section {
-    display: inline-block; /* Asegura que las secciones se centren correctamente */
+    flex: 1 1 calc(25% - 20px); /* Cada sección ocupa 25% del ancho menos el espacio entre ellas */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+    justify-content: space-between; /* Distribuye el contenido verticalmente */
     border: 1px solid #ddd; /* Bordes suaves para secciones */
     padding: 15px;
-    margin-bottom: 20px;
     background-color: #fff; /* Fondo blanco para secciones */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     border-radius: 10px; /* Bordes redondeados */
-    width: 80%; /* Ajusta el ancho para que todas las secciones tengan el mismo tamaño */
-    max-width: 600px; /* Asegura que no se agrande demasiado en pantallas anchas */
+    max-width: 300px; /* Asegura que no se agrande demasiado en pantallas anchas */
 }
 
 .admin-section h2, .coordinator-section h2, .customer-section h2 {
@@ -33,6 +42,11 @@
     color: #666; /* Texto de párrafo en gris claro */
     margin-bottom: 10px;
     line-height: 1.5;
+}
+
+.admin-section .button-container, .coordinator-section .button-container, .customer-section .button-container {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
 }
 
 .admin-section button, .coordinator-section button, .customer-section button {
@@ -50,6 +64,20 @@
     background-color: #e04327; /* Botones en color más oscuro al pasar el ratón */
 }
 
-.admin-section:last-child, .coordinator-section:last-child, .customer-section:last-child {
-    margin-bottom: 0; /* Elimina el margen inferior de la última sección */
+@media (max-width: 1200px) {
+    .admin-section, .coordinator-section, .customer-section {
+        flex: 1 1 calc(33.33% - 20px); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-section, .coordinator-section, .customer-section {
+        flex: 1 1 calc(50% - 20px); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-section, .coordinator-section, .customer-section {
+        flex: 1 1 100%; /* 1 columna en pantallas muy pequeñas */
+    }
 }
