@@ -12,6 +12,7 @@ import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import About from './pages/About';
 import Login from './pages/Login/Login';
+import AdminPanel from './pages/CMS/AdminPanel';
 import ContactForm from './pages/ContactForm';
 import QuotePage from './pages/QuotePage';
 import Blog from './components/Blog';
@@ -171,6 +172,7 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/post/:id" element={<BlogPost />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/settings" element={<AdminPanel />} />
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/calendar" element={<EventCalendar />} />
                     <Route path="/contact" element={<ContactForm />} />

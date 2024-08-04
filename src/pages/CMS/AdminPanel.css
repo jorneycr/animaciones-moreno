@@ -1,0 +1,55 @@
+/* AdminPanel.css */
+.admin-panel {
+    padding: 20px;
+    background-color: #F9F8C5;
+        text-align: center; /* Centra el contenido */
+}
+
+.admin-panel h1 {
+    color: #333; /* Título principal en gris oscuro */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.admin-section, .coordinator-section, .customer-section {
+    display: inline-block; /* Asegura que las secciones se centren correctamente */
+    border: 1px solid #ddd; /* Bordes suaves para secciones */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff; /* Fondo blanco para secciones */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 80%; /* Ajusta el ancho para que todas las secciones tengan el mismo tamaño */
+    max-width: 600px; /* Asegura que no se agrande demasiado en pantallas anchas */
+}
+
+.admin-section h2, .coordinator-section h2, .customer-section h2 {
+    color: #444; /* Subtítulos en gris medio */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.admin-section p, .coordinator-section p, .customer-section p {
+    color: #666; /* Texto de párrafo en gris claro */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.admin-section button, .coordinator-section button, .customer-section button {
+    background-color: #ff4b2b; /* Botones en color solicitado */
+    color: #fff; /* Texto de botones en blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+.admin-section button:hover, .coordinator-section button:hover, .customer-section button:hover {
+    background-color: #e04327; /* Botones en color más oscuro al pasar el ratón */
+}
+
+.admin-section:last-child, .coordinator-section:last-child, .customer-section:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior de la última sección */
+}

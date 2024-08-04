@@ -1,12 +1,13 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from '../../contexts/UserContext';
 import users from '../../data/Users';
 
 const SignInForm = () => {
   const { setUser } = useUser();
+  const navigate = useNavigate();
 
   const initialValues = {
     email: "",
@@ -26,6 +27,7 @@ const SignInForm = () => {
     if (user) {
       setUser(user);
       alert(`Has iniciado sesión como: ${user.user}`);
+      navigate("/settings"); // Redirecciona a /settings
     } else {
       alert('Credenciales inválidas');
     }

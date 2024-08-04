@@ -74,7 +74,7 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
   };
 
   return (
-    <div className="payment-form">
+    <section className="payment-form">
       <Cards
         number={number}
         expiry={expiry}
@@ -121,7 +121,7 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
         <button type="submit">Confirmar Pago</button>
         <button type="button" onClick={handleCancel}>Cancelar</button>
       </form>
-    </div>
+    </section>
   );
 };
 
