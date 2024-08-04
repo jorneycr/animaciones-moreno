@@ -1,15 +1,19 @@
 .language-selector {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 5px;
+    z-index: 1000;
 }
 
 .language-selector ul {
     list-style: none;
-    display: flex;
-    gap: 5px;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1px;
+    position: relative;
 }
 
 .language-selector li {
@@ -23,12 +27,22 @@
     border-radius: 50%;
     border: 2px solid white;
     padding: 5px;
-    transition: transform 0.2s, border-color 0.2s;
+    transition: transform 0.2s, border-color 0.2s, opacity 0.2s;
 }
 
-.language-selector img:hover {
-    transform: scale(1.1);
-    border-color: #ccc;
+.language-selector ul:hover img {
+    opacity: 1;
+}
+
+.language-selector li:not(:first-child) img {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.language-selector ul:hover li img {
+    height: 35px;
+    opacity: 1;
 }
 
 .language-selector img.active {
