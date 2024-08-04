@@ -176,7 +176,14 @@
         "service_cumpleanos_menu_1": "Fiesta temática que incluye una decoración personalizada y actividades relacionadas con el tema elegido, desde superhéroes hasta princesas o aventuras espaciales.",
         "service_cumpleanos_menu_2": "Juegos y actividades para niños diseñados para mantener a todos los pequeños entretenidos y felices, incluyendo búsqueda del tesoro, juegos inflables y manualidades.",
         "service_cumpleanos_menu_3": "Pastel de cumpleaños personalizado diseñado específicamente para el homenajeado, con opciones de sabor, estilo y decoración que reflejan sus gustos y preferencias.",
-        "service_cumpleanos_menu_4": "Animadores y payasos que incluyen espectáculos de magia, juegos interactivos y globoflexia, asegurando que cada momento esté lleno de risas y diversión."
+        "service_cumpleanos_menu_4": "Animadores y payasos que incluyen espectáculos de magia, juegos interactivos y globoflexia, asegurando que cada momento esté lleno de risas y diversión.",
+        "calendar_upcomingEvents": "Próximos Eventos",
+        "calendar_eventTitlePlaceholder": "Título del evento",
+        "calendar_selectType": "Seleccione el tipo",
+        "calendar_addEvent": "Agregar Evento",
+        "calendar_validationError": "Las reservas para eventos escolares y familiares deben realizarse con al menos 2 semanas y no más de 2 meses de anticipación.",
+        "calendar_validationErrorDespedida": "Las reservas para despedidas y eventos sociales deben realizarse con al menos 1 semana y no más de 30 días de anticipación.",
+        "calendar_validationErrorBoda": "Las reservas para bodas y eventos especiales deben realizarse con al menos 18 meses y no más de 20 meses de anticipación."
     },
     "en": {
         "home_homeTitle": "OUR SERVICES",
@@ -355,7 +362,14 @@
         "service_cumpleanos_menu_1": "Themed party including personalized decoration and activities related to the chosen theme, from superheroes to princesses or space adventures.",
         "service_cumpleanos_menu_2": "Games and activities for children designed to keep all the little ones entertained and happy, including treasure hunts, inflatable games, and crafts.",
         "service_cumpleanos_menu_3": "Customized birthday cake specifically designed for the honoree, with options for flavor, style, and decoration that reflect their tastes and preferences.",
-        "service_cumpleanos_menu_4": "Entertainers and clowns including magic shows, interactive games, and balloon twisting, ensuring every moment is filled with laughter and fun."
+        "service_cumpleanos_menu_4": "Entertainers and clowns including magic shows, interactive games, and balloon twisting, ensuring every moment is filled with laughter and fun.",
+        "calendar_upcomingEvents": "Upcoming Events",
+        "calendar_eventTitlePlaceholder": "Event Title",
+        "calendar_selectType": "Select Type",
+        "calendar_addEvent": "Add Event",
+        "calendar_validationError": "Reservations for school and family events must be made at least 2 weeks in advance and no more than 2 months in advance.",
+        "calendar_validationErrorDespedida": "Reservations for farewells and social events must be made at least 1 week in advance and no more than 30 days in advance.",
+        "calendar_validationErrorBoda": "Reservations for weddings and special events must be made at least 18 months in advance and no more than 20 months in advance."
     },
     "fr": {
         "home_homeTitle": "NOS SERVICES",
@@ -534,6 +548,13 @@
         "service_cumpleanos_menu_1": "Fête thématique incluant une décoration personnalisée et des activités liées au thème choisi, des super-héros aux princesses ou aux aventures spatiales.",
         "service_cumpleanos_menu_2": "Jeux et activités pour enfants conçus pour maintenir tous les petits divertis et heureux, y compris des chasses au trésor, des jeux gonflables et des activités manuelles.",
         "service_cumpleanos_menu_3": "Gâteau d'anniversaire personnalisé conçu spécifiquement pour l'honoré, avec des options de saveur, de style et de décoration reflétant ses goûts et préférences.",
-        "service_cumpleanos_menu_4": "Animateurs et clowns incluant des spectacles de magie, des jeux interactifs et de la sculpture sur ballons, garantissant que chaque moment soit rempli de rires et de plaisir."
+        "service_cumpleanos_menu_4": "Animateurs et clowns incluant des spectacles de magie, des jeux interactifs et de la sculpture sur ballons, garantissant que chaque moment soit rempli de rires et de plaisir.",
+        "calendar_upcomingEvents": "Événements à venir",
+        "calendar_eventTitlePlaceholder": "Titre de l'événement",
+        "calendar_selectType": "Sélectionnez le type",
+        "calendar_addEvent": "Ajouter un événement",
+        "calendar_validationError": "Les réservations pour les événements scolaires et familiaux doivent être faites au moins 2 semaines à l'avance et pas plus de 2 mois à l'avance.",
+        "calendar_validationErrorDespedida": "Les réservations pour les adieux et les événements sociaux doivent être faites au moins 1 semaine à l'avance et pas plus de 30 jours à l'avance.",
+        "calendar_validationErrorBoda": "Les réservations pour les mariages et les événements spéciaux doivent être faites au moins 18 mois à l'avance et pas plus de 20 mois à l'avance."
     }
 }
