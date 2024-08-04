@@ -2,8 +2,12 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import { useUser } from '../../contexts/UserContext';
+import users from '../../data/Users';
 
 const SignInForm = () => {
+  const { setUser } = useUser();
+
   const initialValues = {
     email: "",
     password: "",
@@ -18,7 +22,13 @@ const SignInForm = () => {
   });
 
   const onSubmit = (values, { resetForm }) => {
-    alert(`Has iniciado sesión con el email: ${values.email} y la contraseña: ${values.password}`);
+    const user = users.find(user => user.email === values.email && user.password === values.password);
+    if (user) {
+      setUser(user);
+      alert(`Has iniciado sesión como: ${user.user}`);
+    } else {
+      alert('Credenciales inválidas');
+    }
     resetForm();
   };
 

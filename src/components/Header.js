@@ -4,9 +4,11 @@ import './Header.css';
 import logo from '../assets/images/logo.png';
 import Language from './Language';
 import { LanguageContext } from '../contexts/LanguageContext';
+import { useUser } from '../contexts/UserContext';
 
 const Header = () => {
     const { t } = useContext(LanguageContext);
+    const { user, setUser } = useUser();
 
     return (
         <header className="header">
@@ -19,7 +21,14 @@ const Header = () => {
                 <Link to="/about">{t['header_about']}</Link>
                 <Link to="/contact">{t['header_contact']}</Link>
                 <Link to="/blog">{t['header_blog']}</Link>
-                <Link to="/login">{t['header_login']}</Link>
+                {user ? (
+                    <Link>Bienvenido, {user.user}</Link>
+                ) : (
+                    <Link to="/login">{t['header_login']}</Link>
+                )}
+                {user && (
+                    <button className="login-button" onClick={() => setUser(null)}>Cerrar sesión</button>
+                )}
             </nav>
             <section className="cta">
                 <Language />

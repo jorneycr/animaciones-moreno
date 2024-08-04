@@ -91,3 +91,21 @@
         gap: 5px;
     }
 }
+
+.login-button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0px 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #e03a2e; /* Color de fondo más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Aumenta el tamaño en un 5% */
+}
