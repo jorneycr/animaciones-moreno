@@ -210,7 +210,7 @@ button.react-calendar__navigation__label {
     background: lightslategray;
 }
 button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-familiar,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-escolar,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-School,
 button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-despedida,
 button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-social,
 button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-especial,
@@ -219,7 +219,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar
 button.react-calendar__tile.react-calendar__month-view__days__day.highlight-familiar,
 button.react-calendar__tile.react-calendar__month-view__days__day.highlight-social,
 button.react-calendar__tile.react-calendar__month-view__days__day.highlight-especial,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-escolar,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-School,
 button.react-calendar__tile.react-calendar__month-view__days__day.highlight-graduación,
 button.react-calendar__tile.react-calendar__month-view__days__day.highlight-cumpleaños,
 button.react-calendar__tile.react-calendar__month-view__days__day.highlight-despedida

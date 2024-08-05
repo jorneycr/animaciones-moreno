@@ -7,10 +7,10 @@ import './EventCalendar.css';
 import 'react-calendar/dist/Calendar.css';
 
 const initialEvents = [
-    { id: 1, title: 'Evento Escolar', date: new Date(2024, 7, 20), type: 'Escolar' },
-    { id: 2, title: 'Evento Familiar', date: new Date(2024, 7, 25), type: 'Familiar' },
-    { id: 3, title: 'Despedida', date: new Date(2024, 8, 5), type: 'Despedida' },
-    { id: 4, title: 'Boda', date: new Date(2025, 0, 15), type: 'Boda' },
+    { id: 1, title: 'School Event', date: new Date(2024, 7, 20), type: 'School' },
+    { id: 2, title: 'Family Event', date: new Date(2024, 7, 25), type: 'Family' },
+    { id: 3, title: 'Farewell', date: new Date(2024, 8, 5), type: 'Farewell' },
+    { id: 4, title: 'Wedding', date: new Date(2025, 0, 15), type: 'Wedding' },
 ];
 
 const EventCalendar = () => {
@@ -56,15 +56,15 @@ const EventCalendar = () => {
 
         let errorMessage = '';
 
-        if (type === 'Escolar' || type === 'Familiar') {
+        if (type === 'School' || type === 'Family') {
             if (timeDifference < 14 || timeDifference > 60) {
                 errorMessage = t['calendar_validationError'];
             }
-        } else if (type === 'Despedida' || type === 'Social') {
+        } else if (type === 'Farewell' || type === 'Social') {
             if (timeDifference < 7 || timeDifference > 30) {
                 errorMessage = t['calendar_validationErrorDespedida'];
             }
-        } else if (type === 'Boda' || type === 'Especial') {
+        } else if (type === 'Wedding' || type === 'Special') {
             if (timeDifference < 547 || timeDifference > 609) {
                 errorMessage = t['calendar_validationErrorBoda'];
             }
@@ -81,16 +81,16 @@ const EventCalendar = () => {
     const handleConfirmPayment = (e) => {
         e.preventDefault();
 
-        // Agregar el nuevo evento a la lista de eventos
+        // Add the new event to the events list
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
 
         setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
         
-        // Limpiar el formulario de nuevo evento
+        // Clear the new event form
         setNewEvent({ title: '', date: '', type: '' });
 
-        // Cerrar el modal de pago
+        // Close the payment modal
         setIsModalOpen(false);
     };
 
@@ -133,12 +133,12 @@ const EventCalendar = () => {
                 />
                 <select name="type" value={newEvent.type} onChange={handleInputChange} required>
                     <option value="">{t['calendar_selectType']}</option>
-                    <option value="Escolar">Escolar</option>
-                    <option value="Familiar">Familiar</option>
-                    <option value="Despedida">Despedida</option>
-                    <option value="Boda">Boda</option>
-                    <option value="Graduación">Graduación</option>
-                    <option value="Cumpleaños">Cumpleaños</option>
+                    <option value="School">{t['calendar_typeSchool']}</option>
+                    <option value="Family">{t['calendar_typeFamily']}</option>
+                    <option value="Farewell">{t['calendar_typeFarewell']}</option>
+                    <option value="Wedding">{t['calendar_typeWedding']}</option>
+                    <option value="Graduation">{t['calendar_typeGraduation']}</option>
+                    <option value="Birthday">{t['calendar_typeBirthday']}</option>
                 </select>
                 <button type="submit">{t['calendar_addEvent']}</button>
             </form>

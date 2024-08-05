@@ -1,158 +1,161 @@
 import React from 'react';
 import { useUser } from '../../contexts/UserContext';
+import { useContext } from 'react';
+import { LanguageContext } from '../../contexts/LanguageContext';
 import './AdminPanel.css';
 
 const AdminPanel = () => {
     const { user } = useUser();
+    const { t } = useContext(LanguageContext);
 
     if (!user) {
-        return <section className="sections-container">No tiene permisos para ver esta página</section>;
+        return <section className="sections-container">{t["adminPanel_no_permissions"]}</section>;
     }
 
     return (
         <section className="admin-panel">
             {user.role && user.role === "admin" && (
                 <>
-                    <h1>Panel de Administración</h1>
+                    <h1>{t["adminPanel_admin_panel"]}</h1>
                     <section className="sections-container">
                         <section className="admin-section">
-                            <h2>Gestión del Catálogo</h2>
-                            <p>Actualizar catálogo de servicios, productos, ofertas, fotografías, videos, información general, directorio, precios y promociones.</p>
-                            <button>Gestionar Catálogo</button>
+                            <h2>{t["adminPanel_manage_catalog"]}</h2>
+                            <p>{t["adminPanel_update_catalog_description"]}</p>
+                            <button>{t["adminPanel_manage_catalog_button"]}</button>
                         </section>
                         <section className="admin-section">
-                            <h2>Contenido del Blog</h2>
-                            <p>Actualizar contenido del blog para mantener el sitio web atractivo para los usuarios.</p>
-                            <button>Gestionar Blog</button>
+                            <h2>{t["adminPanel_blog_content"]}</h2>
+                            <p>{t["adminPanel_update_blog_description"]}</p>
+                            <button>{t["adminPanel_manage_blog_button"]}</button>
                         </section>
                         <section className="admin-section">
-                            <h2>Cuentas de Coordinadores de Eventos</h2>
-                            <p>Crear cuentas para coordinadores de eventos según sea necesario.</p>
-                            <button>Crear Cuenta</button>
+                            <h2>{t["adminPanel_event_coordinator_accounts"]}</h2>
+                            <p>{t["adminPanel_create_accounts_description"]}</p>
+                            <button>{t["adminPanel_create_account_button"]}</button>
                         </section>
                         <section className="admin-section">
-                            <h2>Reservas en Línea</h2>
-                            <p>Realizar, aprobar y cancelar reservas en línea.</p>
-                            <button>Gestionar Reservas</button>
+                            <h2>{t["adminPanel_online_bookings"]}</h2>
+                            <p>{t["adminPanel_manage_bookings_description"]}</p>
+                            <button>{t["adminPanel_manage_bookings_button"]}</button>
                         </section>
                         <section className="admin-section">
-                            <h2>Métodos de Pago</h2>
-                            <p>Configurar métodos de pago para garantizar transacciones seguras.</p>
-                            <button>Configurar Pagos</button>
+                            <h2>{t["adminPanel_payment_methods"]}</h2>
+                            <p>{t["adminPanel_configure_payments_description"]}</p>
+                            <button>{t["adminPanel_configure_payments_button"]}</button>
                         </section>
                         <section className="admin-section">
-                            <h2>Actualización de Información Personal</h2>
-                            <p>Actualizar información personal según las solicitudes de los clientes.</p>
-                            <button>Actualizar Información</button>
+                            <h2>{t["adminPanel_update_personal_information"]}</h2>
+                            <p>{t["adminPanel_update_information_description"]}</p>
+                            <button>{t["adminPanel_update_information_button"]}</button>
                         </section>
                         <section className="admin-section">
-                            <h2>Reportes</h2>
-                            <p>Obtener reportes detallados sobre eventos, citas, reservas, clientes, etc.</p>
-                            <button>Ver Reportes</button>
+                            <h2>{t["adminPanel_reports"]}</h2>
+                            <p>{t["adminPanel_view_reports_description"]}</p>
+                            <button>{t["adminPanel_view_reports_button"]}</button>
                         </section>
                     </section>
                 </>
             )}
             {user.role && user.role === "coordinador" && (
                 <>
-                    <h1>Panel del Coordinador de Eventos</h1>
+                    <h1>{t["adminPanel_coordinator_panel"]}</h1>
                     <section className="sections-container">
                         <section className="coordinator-section">
-                            <h2>Gestión de Reservas y Citas</h2>
-                            <p>Crear, aprobar o cancelar reservas y citas, así como elaborar cotizaciones.</p>
-                            <button>Gestionar Reservas</button>
+                            <h2>{t["adminPanel_manage_bookings_appointments"]}</h2>
+                            <p>{t["adminPanel_manage_bookings_appointments_description"]}</p>
+                            <button>{t["adminPanel_manage_bookings_appointments_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Logística y Comunicación</h2>
-                            <p>Coordinar la logística de los eventos y comunicarse con clientes y proveedores.</p>
-                            <button>Coordinar Logística</button>
+                            <h2>{t["adminPanel_logistics_communication"]}</h2>
+                            <p>{t["adminPanel_coordinate_logistics_description"]}</p>
+                            <button>{t["adminPanel_coordinate_logistics_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Planes y Paquetes</h2>
-                            <p>Realizar planes o paquetes y enviar confirmaciones por correo electrónico.</p>
-                            <button>Gestionar Planes</button>
+                            <h2>{t["adminPanel_plans_packages"]}</h2>
+                            <p>{t["adminPanel_manage_plans_description"]}</p>
+                            <button>{t["adminPanel_manage_plans_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Promociones y Comunicados</h2>
-                            <p>Ofrecer promociones a los clientes y enviar comunicados importantes.</p>
-                            <button>Gestionar Promociones</button>
+                            <h2>{t["adminPanel_promotions_announcements"]}</h2>
+                            <p>{t["adminPanel_manage_promotions_description"]}</p>
+                            <button>{t["adminPanel_manage_promotions_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Reportes</h2>
-                            <p>Generar reportes detallados sobre clientes, reservas y citas.</p>
-                            <button>Generar Reportes</button>
+                            <h2>{t["adminPanel_reports"]}</h2>
+                            <p>{t["adminPanel_generate_reports_description"]}</p>
+                            <button>{t["adminPanel_generate_reports_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Consultas de Usuarios</h2>
-                            <p>Responder a las consultas de los usuarios enviadas desde el formulario de contacto.</p>
-                            <button>Responder Consultas</button>
+                            <h2>{t["adminPanel_user_queries"]}</h2>
+                            <p>{t["adminPanel_respond_queries_description"]}</p>
+                            <button>{t["adminPanel_respond_queries_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Presupuesto</h2>
-                            <p>Realizar un seguimiento del presupuesto asignado para cada evento, registrando gastos y comparándolos con el presupuesto planificado.</p>
-                            <button>Gestionar Presupuesto</button>
+                            <h2>{t["adminPanel_budget"]}</h2>
+                            <p>{t["adminPanel_manage_budget_description"]}</p>
+                            <button>{t["adminPanel_manage_budget_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Proveedores</h2>
-                            <p>Gestionar proveedores y mantener un registro de proveedores utilizados en eventos anteriores.</p>
-                            <button>Gestionar Proveedores</button>
+                            <h2>{t["adminPanel_suppliers"]}</h2>
+                            <p>{t["adminPanel_manage_suppliers_description"]}</p>
+                            <button>{t["adminPanel_manage_suppliers_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Listas de Invitados</h2>
-                            <p>Gestionar listas de invitados para eventos, enviar invitaciones y confirmar asistencias.</p>
-                            <button>Gestionar Invitados</button>
+                            <h2>{t["adminPanel_guest_lists"]}</h2>
+                            <p>{t["adminPanel_manage_guest_lists_description"]}</p>
+                            <button>{t["adminPanel_manage_guest_lists_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Tareas y Colaboradores</h2>
-                            <p>Crear y asignar tareas a miembros de un equipo o colaboradores externos, y realizar un seguimiento del progreso.</p>
-                            <button>Gestionar Tareas</button>
+                            <h2>{t["adminPanel_tasks_collaborators"]}</h2>
+                            <p>{t["adminPanel_manage_tasks_description"]}</p>
+                            <button>{t["adminPanel_manage_tasks_button"]}</button>
                         </section>
                         <section className="coordinator-section">
-                            <h2>Evaluaciones de Eventos</h2>
-                            <p>Realizar evaluaciones de eventos para recopilar comentarios y registrar lecciones aprendidas.</p>
-                            <button>Realizar Evaluaciones</button>
+                            <h2>{t["adminPanel_event_evaluations"]}</h2>
+                            <p>{t["adminPanel_conduct_evaluations_description"]}</p>
+                            <button>{t["adminPanel_conduct_evaluations_button"]}</button>
                         </section>
                     </section>
                 </>
             )}
             {user.role && user.role === "cliente" && (
                 <>
-                    <h1>Panel de Cliente</h1>
+                    <h1>{t["adminPanel_client_panel"]}</h1>
                     <section className="sections-container">
                         <section className="customer-section">
-                            <h2>Historial de Reservas y Citas</h2>
-                            <p>Visualiza tu historial de reservas, eventos y citas.</p>
-                            <button>Ver Historial</button>
+                            <h2>{t["adminPanel_booking_history"]}</h2>
+                            <p>{t["adminPanel_view_history_description"]}</p>
+                            <button>{t["adminPanel_view_history_button"]}</button>
                         </section>
                         <section className="customer-section">
-                            <h2>Estado de Reservas</h2>
-                            <p>Consulta el estado de tus reservas y eventos actuales.</p>
-                            <button>Consultar Estado</button>
+                            <h2>{t["adminPanel_booking_status"]}</h2>
+                            <p>{t["adminPanel_check_status_description"]}</p>
+                            <button>{t["adminPanel_check_status_button"]}</button>
                         </section>
                         <section className="customer-section">
-                            <h2>Actualizar Información Personal</h2>
-                            <p>Actualiza tu información personal y detalles de contacto.</p>
-                            <button>Actualizar Información</button>
+                            <h2>{t["adminPanel_update_personal_information"]}</h2>
+                            <p>{t["adminPanel_update_information_description"]}</p>
+                            <button>{t["adminPanel_update_information_button"]}</button>
                         </section>
                         <section className="customer-section">
-                            <h2>Consultas y Soporte</h2>
-                            <p>Realiza consultas y accede al soporte al cliente.</p>
-                            <button>Hacer Consulta</button>
+                            <h2>{t["adminPanel_queries_support"]}</h2>
+                            <p>{t["adminPanel_make_query_description"]}</p>
+                            <button>{t["adminPanel_make_query_button"]}</button>
                         </section>
                         <section className="customer-section">
-                            <h2>Promociones Exclusivas</h2>
-                            <p>Accede a promociones y ofertas exclusivas para clientes.</p>
-                            <button>Ver Promociones</button>
+                            <h2>{t["adminPanel_exclusive_promotions"]}</h2>
+                            <p>{t["adminPanel_view_promotions_description"]}</p>
+                            <button>{t["adminPanel_view_promotions_button"]}</button>
                         </section>
                         <section className="customer-section">
-                            <h2>Recomendaciones y Opiniones</h2>
-                            <p>Envía tus opiniones y recomendaciones para ayudarnos a mejorar.</p>
-                            <button>Enviar Opinión</button>
+                            <h2>{t["adminPanel_recommendations_opinions"]}</h2>
+                            <p>{t["adminPanel_send_opinion_description"]}</p>
+                            <button>{t["adminPanel_send_opinion_button"]}</button>
                         </section>
                         <section className="customer-section">
-                            <h2>Ayuda y Recursos</h2>
-                            <p>Accede a la ayuda y recursos para obtener la mejor experiencia.</p>
-                            <button>Obtener Ayuda</button>
+                            <h2>{t["adminPanel_help_resources"]}</h2>
+                            <p>{t["adminPanel_get_help_description"]}</p>
+                            <button>{t["adminPanel_get_help_button"]}</button>
                         </section>
                     </section>
                 </>

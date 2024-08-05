@@ -22,12 +22,12 @@ const Header = () => {
                 <Link to="/contact">{t['header_contact']}</Link>
                 <Link to="/blog">{t['header_blog']}</Link>
                 {user ? (
-                    <Link to="/settings">Bienvenido, {user.user}</Link>
+                    <Link to="/settings">{t['header_welcome']}, {user.user}</Link>
                 ) : (
                     <Link to="/login">{t['header_login']}</Link>
                 )}
                 {user && (
-                    <button className="login-button" onClick={() => setUser(null)}>Cerrar sesión</button>
+                    <button className="login-button" onClick={() => setUser(null)}>{t['header_logout']}</button>
                 )}
             </nav>
             <section className="cta">
