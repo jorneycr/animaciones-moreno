@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 const SignUpForm = () => {
+  const { t } = useContext(LanguageContext);
+
   const initialValues = {
     name: "",
     email: "",
@@ -11,17 +14,17 @@ const SignUpForm = () => {
 
   const validationSchema = Yup.object({
     name: Yup.string()
-      .required("Nombre es requerido"),
+      .required(t['sign_up_name_required']),
     email: Yup.string()
-      .email("Correo electrónico no es válido")
-      .required("Correo electrónico es requerido"),
+      .email(t['sign_up_email_invalid'])
+      .required(t['sign_up_email_required']),
     password: Yup.string()
-      .min(6, "La contraseña debe tener al menos 6 caracteres")
-      .required("Contraseña es requerida"),
+      .min(6, t['sign_up_password_min'])
+      .required(t['sign_up_password_required']),
   });
 
   const onSubmit = (values, { resetForm }) => {
-    alert(`Te has registrado con nombre: ${values.name}, correo electrónico: ${values.email}, y contraseña: ${values.password}`);
+    alert(`${t['sign_up_success']} ${t['sign_up_name']}: ${values.name}, ${t['sign_up_email']}: ${values.email}`);
     resetForm();
   };
 
@@ -33,26 +36,26 @@ const SignUpForm = () => {
         onSubmit={onSubmit}
       >
         <Form>
-          <h1>Crear Cuenta</h1>
+          <h1>{t['sign_up_title']}</h1>
           <Field
             type="text"
             name="name"
-            placeholder="Nombre"
+            placeholder={t['sign_up_name_placeholder']}
           />
           <ErrorMessage name="name" component="div" />
           <Field
             type="email"
             name="email"
-            placeholder="Correo Electrónico"
+            placeholder={t['sign_up_email_placeholder']}
           />
           <ErrorMessage name="email" component="div" />
           <Field
             type="password"
             name="password"
-            placeholder="Contraseña"
+            placeholder={t['sign_up_password_placeholder']}
           />
           <ErrorMessage name="password" component="div" />
-          <button className="inicioSeccion" type="submit">Registrarse</button>
+          <button className="inicioSeccion" type="submit">{t['sign_up_button']}</button>
         </Form>
       </Formik>
     </section>

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Login.css";
 import SignInForm from "./SingIn";
 import SignUpForm from "./SignUp";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 function Login() {
+  const { t } = useContext(LanguageContext);
   const [type, setType] = useState("signIn");
 
   const handleOnClick = (text) => {
@@ -23,27 +25,27 @@ function Login() {
         <aside className="overlay-container">
           <section className="overlay">
             <section className="overlay-panel overlay-left">
-              <h1 style={{color:'#FFF'}}>¡Bienvenido de nuevo!</h1>
+              <h1 style={{color:'#FFF'}}>{t['login_welcome_back']}</h1>
               <p style={{color:'#FFF'}}>
-                Para mantenerte conectado con nosotros, por favor inicia sesión con tu información personal.
+                {t['login_persistent']}
               </p>
               <button
                 className="ghost"
                 id="signIn"
                 onClick={() => handleOnClick("signIn")}
               >
-                Iniciar sesión
+                {t['login_sign_in']}
               </button>
             </section>
             <section className="overlay-panel overlay-right">
-              <h1 style={{color:'#FFF'}}>¡Hola, amigo!</h1>
-              <p style={{color:'#FFF'}}>Ingresa tus datos personales y comienza tu viaje con nosotros.</p>
+              <h1 style={{color:'#FFF'}}>{t['login_hello']}</h1>
+              <p style={{color:'#FFF'}}>{t['login_start_journey']}</p>
               <button
                 className="ghost"
                 id="signUp"
                 onClick={() => handleOnClick("signUp")}
               >
-                Registrarse
+                {t['login_sign_up']}
               </button>
             </section>
           </section>
