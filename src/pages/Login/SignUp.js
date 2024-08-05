@@ -52,7 +52,7 @@ const SignUpForm = () => {
             placeholder="Contraseña"
           />
           <ErrorMessage name="password" component="div" />
-          <button type="submit">Registrarse</button>
+          <button className="inicioSeccion" type="submit">Registrarse</button>
         </Form>
       </Formik>
     </section>

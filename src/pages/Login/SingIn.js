@@ -56,7 +56,7 @@ const SignInForm = () => {
           />
           <ErrorMessage name="password" component="div" />
           <Link className="forgotPassword" to="/forgot-password">¿Olvidaste tu contraseña?</Link>
-          <button type="submit">Iniciar sesión</button>
+          <button  className="inicioSeccion" type="submit">Iniciar sesión</button>
         </Form>
       </Formik>
     </section>

@@ -206,6 +206,26 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__next-button
 button.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
     background: lightslategray;
 }
+button.react-calendar__navigation__label {
+    background: lightslategray;
+}
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-familiar,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-escolar,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-despedida,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-social,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-especial,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-graduación,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-cumpleaños,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-familiar,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-social,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-especial,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-escolar,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-graduación,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-cumpleaños,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-despedida
+{
+    background: aqua;
+}
 .validation-error {
     color: #d9534f;
     background-color: #f2dede;
@@ -217,3 +237,7 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__next2-butto
     text-align: center;
 }
 
+.react-calendar {
+    width: 100%!important;
+    max-width: 100%;
+  }
