@@ -1,5 +1,6 @@
 {
     "es": {
+        "heroSlider_text": "Animaciones Moreno",
         "home_homeTitle": "NUESTROS SERVICIOS",
         "home_reviews": "Reseñas",
         "home_readReviews": "Lea las opiniones de nuestros clientes satisfechos.",
@@ -303,9 +304,21 @@
         "sign_in_email_placeholder": "Correo electrónico",
         "sign_in_password_placeholder": "Contraseña",
         "sign_in_forgot_password": "¿Olvidaste tu contraseña?",
-        "sign_in_button": "Iniciar sesión"
+        "sign_in_button": "Iniciar sesión",
+        "paymentForm_cardNumberPlaceholder": "Número de la tarjeta",
+        "paymentForm_namePlaceholder": "Nombre",
+        "paymentForm_expiryPlaceholder": "MM/YY Expiración",
+        "paymentForm_cvcPlaceholder": "CVC",
+        "paymentForm_confirmPaymentButton": "Confirmar Pago",
+        "paymentForm_cancelButton": "Cancelar",
+        "paymentForm_validationError_cardNumber": "El número de la tarjeta debe tener 16 dígitos.",
+        "paymentForm_validationError_name": "El nombre debe contener al menos un nombre y un apellido.",
+        "paymentForm_validationError_expiry": "La fecha de expiración debe tener el formato MM/YY.",
+        "paymentForm_validationError_expiryDate": "La fecha de expiración debe ser mayor a la fecha actual.",
+        "paymentForm_validationError_cvc": "El CVC debe tener 3 dígitos."
     },
     "en": {
+        "heroSlider_text": "Moreno Animations",
         "home_homeTitle": "OUR SERVICES",
         "home_reviews": "Reviews",
         "home_readReviews": "Read the opinions of our satisfied customers.",
@@ -609,9 +622,21 @@
         "sign_in_email_placeholder": "Email Address",
         "sign_in_password_placeholder": "Password",
         "sign_in_forgot_password": "Forgot your password?",
-        "sign_in_button": "Sign In"
+        "sign_in_button": "Sign In",
+        "paymentForm_cardNumberPlaceholder": "Card Number",
+        "paymentForm_namePlaceholder": "Name",
+        "paymentForm_expiryPlaceholder": "MM/YY Expiry",
+        "paymentForm_cvcPlaceholder": "CVC",
+        "paymentForm_confirmPaymentButton": "Confirm Payment",
+        "paymentForm_cancelButton": "Cancel",
+        "paymentForm_validationError_cardNumber": "The card number must have 16 digits.",
+        "paymentForm_validationError_name": "The name must contain at least a first and last name.",
+        "paymentForm_validationError_expiry": "The expiry date must be in the format MM/YY.",
+        "paymentForm_validationError_expiryDate": "The expiry date must be later than the current date.",
+        "paymentForm_validationError_cvc": "The CVC must have 3 digits."
     },
     "fr": {
+        "heroSlider_text": "Animations Moreno",
         "home_homeTitle": "NOS SERVICES",
         "home_reviews": "Avis",
         "home_readReviews": "Lisez les avis de nos clients satisfaits.",
@@ -915,6 +940,17 @@
         "sign_in_email_placeholder": "Adresse e-mail",
         "sign_in_password_placeholder": "Mot de passe",
         "sign_in_forgot_password": "Mot de passe oublié?",
-        "sign_in_button": "Se connecter"
+        "sign_in_button": "Se connecter",
+        "paymentForm_cardNumberPlaceholder": "Numéro de carte",
+        "paymentForm_namePlaceholder": "Nom",
+        "paymentForm_expiryPlaceholder": "MM/AA Expiration",
+        "paymentForm_cvcPlaceholder": "CVC",
+        "paymentForm_confirmPaymentButton": "Confirmer le paiement",
+        "paymentForm_cancelButton": "Annuler",
+        "paymentForm_validationError_cardNumber": "Le numéro de la carte doit comporter 16 chiffres.",
+        "paymentForm_validationError_name": "Le nom doit contenir au moins un prénom et un nom de famille.",
+        "paymentForm_validationError_expiry": "La date d'expiration doit être au format MM/AA.",
+        "paymentForm_validationError_expiryDate": "La date d'expiration doit être ultérieure à la date actuelle.",
+        "paymentForm_validationError_cvc": "Le CVC doit comporter 3 chiffres."
     }
 }

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Cards from 'react-credit-cards-2';
+import { LanguageContext } from '../contexts/LanguageContext';
 import 'react-credit-cards-2/dist/es/styles-compiled.css';
 import './PaymentForm.css';
 
 const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
+  const { t } = useContext(LanguageContext);
   const [number, setNumber] = useState('');
   const [name, setName] = useState('');
   const [focused, setFocused] = useState('');
@@ -45,27 +47,27 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
     
     // Validaciones
     if (number.length !== 16) {
-      setValidationError('El número de la tarjeta debe tener 16 dígitos.');
+      setValidationError(t['paymentForm_validationError_cardNumber']);
       return;
     }
 
     if (!/^[a-zA-Z]+\s[a-zA-Z]+$/.test(name)) {
-      setValidationError('El nombre debe contener al menos un nombre y un apellido.');
+      setValidationError(t['paymentForm_validationError_name']);
       return;
     }
 
     if (!/^\d{2}\/\d{2}$/.test(expiry)) {
-      setValidationError('La fecha de expiración debe tener el formato MM/YY.');
+      setValidationError(t['paymentForm_validationError_expiry']);
       return;
     }
 
     if (expiryDate <= today) {
-      setValidationError('La fecha de expiración debe ser mayor a la fecha actual.');
+      setValidationError(t['paymentForm_validationError_expiryDate']);
       return;
     }
 
     if (cvc.length !== 3) {
-      setValidationError('El CVC debe tener 3 dígitos.');
+      setValidationError(t['paymentForm_validationError_cvc']);
       return;
     }
 
@@ -86,7 +88,7 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
         <input
           type="text"
           name="number"
-          placeholder="Card Number"
+          placeholder={t['paymentForm_cardNumberPlaceholder']}
           value={number}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
@@ -94,7 +96,7 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
         <input
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder={t['paymentForm_namePlaceholder']}
           value={name}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
@@ -102,7 +104,7 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
         <input
           type="text"
           name="expiry"
-          placeholder="MM/YY Expiry"
+          placeholder={t['paymentForm_expiryPlaceholder']}
           value={expiry}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
@@ -110,7 +112,7 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
         <input
           type="text"
           name="cvc"
-          placeholder="CVC"
+          placeholder={t['paymentForm_cvcPlaceholder']}
           value={cvc}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
@@ -118,8 +120,8 @@ const PaymentForm = ({ handleConfirmPayment, handleCancel, setNewEvent }) => {
         
         {validationError && <p className="validation-error">{validationError}</p>}
         
-        <button type="submit">Confirmar Pago</button>
-        <button type="button" onClick={handleCancel}>Cancelar</button>
+        <button type="submit">{t['paymentForm_confirmPaymentButton']}</button>
+        <button type="button" onClick={handleCancel}>{t['paymentForm_cancelButton']}</button>
       </form>
     </section>
   );

@@ -209,23 +209,22 @@ button.react-calendar__navigation__arrow.react-calendar__navigation__next2-butto
 button.react-calendar__navigation__label {
     background: lightslategray;
 }
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-familiar,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-School,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-despedida,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-social,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-especial,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-graduación,
-button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-cumpleaños,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-familiar,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-social,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-especial,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-School,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-graduación,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-cumpleaños,
-button.react-calendar__tile.react-calendar__month-view__days__day.highlight-despedida
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-family,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-school,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-farewell,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-wedding,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-graduation,
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.highlight-birthday,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-family,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-school,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-farewell,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-wedding,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-graduation,
+button.react-calendar__tile.react-calendar__month-view__days__day.highlight-birthday
 {
     background: aqua;
 }
+
 .validation-error {
     color: #d9534f;
     background-color: #f2dede;

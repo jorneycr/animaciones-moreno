@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import './HeroSlider.css';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 import hero1 from '../assets/images/home/hero1.jpg';
 import hero2 from '../assets/images/home/hero2.jpg';
@@ -8,6 +9,8 @@ import hero3 from '../assets/images/home/hero3.jpg';
 
 
 const HeroSlider = () => {
+    const { t } = useContext(LanguageContext);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -33,7 +36,7 @@ const HeroSlider = () => {
                         className="hero-slide" 
                         style={{ backgroundImage: `url(${slide.src})` }}
                     >
-                        <section className="hero-text">Animaciones Moreno</section>
+                        <section className="hero-text">{t['heroSlider_text']}</section>
                         <img src={slide.src} alt={slide.alt} style={{ display: 'block' }} />
                     </section>
                 </section>

@@ -84,6 +84,7 @@ const EventCalendar = () => {
         // Add the new event to the events list
         const { title, date, type } = newEvent;
         const eventDate = new Date(date);
+        eventDate.setDate(eventDate.getDate() + 1);
 
         setEvents(prevEvents => [...prevEvents, { id: prevEvents.length + 1, title, date: eventDate, type }]);
         
