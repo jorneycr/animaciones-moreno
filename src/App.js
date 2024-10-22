@@ -29,10 +29,15 @@ import graduaciones from './assets/images/home/graduaciones.jpg';
 import cumpleanos from './assets/images/home/cumpleanos.jpg';
 import BlogPost from './components/BlogPost';
 import ForgotPassword from './pages/Login/ForgotPassword';
+import ReactGA from 'react-ga4';
+import UsePageTracking from './UsePageTracking';
+
+// Inicializa Google Analytics
+ReactGA.initialize('G-JE28035EJS');  // Reemplaza con tu ID de seguimiento
 
 function App() {
     const [services, setServices] = useState([]);
-    const { t } = useContext(LanguageContext);
+    const { t } = useContext(LanguageContext);    
 
     useEffect(() => {
         // Simulación de una llamada a una API
@@ -163,6 +168,7 @@ function App() {
 
     return (
         <Router>
+            <UsePageTracking />  
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home services={services} />} />
