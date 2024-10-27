@@ -14,7 +14,7 @@ const Footer = () => {
                 <section className="footer-content">
                     <section className='logo-social-media'>
                         <Link to="/">
-                            <img className='logoWhite' src={logoWhite} alt="logoWhite" />
+                            <img className='logoWhite' src={logoWhite} alt="logoWhite" width="100" height="50" />
                         </Link>
                         <SocialMedia />
                     </section>

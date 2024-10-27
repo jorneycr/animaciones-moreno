@@ -46,18 +46,14 @@
 }
 
 .language-selector img.active {
-    border-color: #007BFF;
-    /* Color del borde para el idioma activo */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-    /* Sombra para resaltar el idioma activo */
+    border-color: #007BFF; /* Color del borde para el idioma activo */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra para resaltar el idioma activo */
 }
 
 .language-selector img:not(.active):hover {
     transform: scale(1.1);
-    border-color: #007BFF;
-    /* Color del borde para el hover */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-    /* Sombra para resaltar el hover */
+    border-color: #007BFF; /* Color del borde para el hover */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra para resaltar el hover */
 }
 
 /* Media queries para responsividad */

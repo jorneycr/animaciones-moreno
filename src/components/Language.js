@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './Language.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import esLogo from '../assets/images/es.webp';
 import enLogo from '../assets/images/en.webp';
 import frLogo from '../assets/images/fr.webp';
@@ -20,21 +21,23 @@ const Language = () => {
         <nav className="language-selector">
             <ul>
                 <li>
-                    <img 
+                    <LazyLoadImage 
                         src={currentLanguage.logo} 
                         alt={currentLanguage.code.toUpperCase()} 
                         title={currentLanguage.title}
                         className="active"
+                        effect="blur" // Efecto de carga diferida
                     />
                 </li>
                 {languages.filter(lang => lang.code !== language).map(lang => (
                     <li key={lang.code}>
-                        <img 
+                        <LazyLoadImage 
                             src={lang.logo} 
                             alt={lang.code.toUpperCase()} 
                             title={lang.title}
                             onClick={() => setLanguage(lang.code)} 
                             className="inactive"
+                            effect="blur" // Efecto de carga diferida
                         />
                     </li>
                 ))}

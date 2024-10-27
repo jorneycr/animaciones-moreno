@@ -1,3 +1,4 @@
+/* General */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,24 +10,7 @@ body {
   line-height: 1.6;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-}
-
-.cta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.flag {
-  width: 30px;
-}
-
+/* Hero Slider */
 .hero {
   text-align: center;
   padding: 40px 20px;
@@ -47,30 +31,7 @@ body {
   font-size: 1.2em;
 }
 
-.catering {
-  color: #ff6b6b;
-}
-
-.image-collage {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.image-collage img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform 0.3s;
-}
-
-.image-collage img:hover {
-  transform: scale(1.1);
-}
-
+/* Services Section */
 .services {
   padding: 40px 20px;
 }
@@ -91,16 +52,13 @@ body {
 
 .service-card {
   min-width: 280px;
-  min-height: 250px;
   max-width: 280px;
-  max-height: 250px;
   text-align: center;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
 }
 
 .service-card:hover {
@@ -111,14 +69,12 @@ body {
 .service-card img {
   width: 100px;
   height: 100px;
-  margin-bottom: 0px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .service-card h3 {
   font-size: 1.5em;
-  margin-bottom: 10px;
   color: #333;
 }
 
@@ -126,6 +82,100 @@ body {
   color: #666;
 }
 
+/* Review Section */
+.review {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.review h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.review p {
+  color: #666;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 40px 20px;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.gallery p {
+  color: #666;
+}
+
+/* Personal Directory Section */
+.personal-directory {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.personal-directory h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.personal-directory p {
+  color: #666;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+.contact p {
+  font-size: 1.2em;
+}
+
+.locations {
+  margin-top: 20px;
+}
+
+.locations h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.locations p {
+  color: #666;
+}
+
+/* Call-to-action button */
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #ff4b4b;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .service-card {
     flex: 1 1 calc(50% - 20px);
@@ -138,85 +188,4 @@ body {
     flex: 1 1 100%;
     max-width: 100%;
   }
-}
-
-.contact {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #f8f8f8;
-}
-
-.locations {
-  margin-top: 20px;
-}
-
-.locations p {
-  font-size: 1em;
-  color: #333;
-}
-
-/* Estilos existentes */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* Sección de Review */
-.review {
-  padding: 40px 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-}
-
-.review h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.review p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-/* Sección de Galería */
-.gallery {
-  padding: 40px 20px;
-  background-color: #e8e8e8;
-  text-align: center;
-}
-
-.gallery h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.gallery p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-/* Sección de Directorio Personal */
-.personal-directory {
-  padding: 40px 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-}
-
-.personal-directory h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.personal-directory p {
-  color: #666;
-  margin-bottom: 20px;
 }

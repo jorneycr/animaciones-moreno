@@ -5,7 +5,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import './HeroSlider.css';
 import { LanguageContext } from '../contexts/LanguageContext';
 
-import hero1 from '../assets/images/home/hero1.webp';
 import hero2 from '../assets/images/home/hero2.webp';
 import hero3 from '../assets/images/home/hero3.webp';
 
@@ -24,7 +23,6 @@ const HeroSlider = () => {
     };
 
     const slides = [
-        { src: hero1, alt: "Hero 1" },
         { src: hero2, alt: "Hero 2" },
         { src: hero3, alt: "Hero 3" },
     ];

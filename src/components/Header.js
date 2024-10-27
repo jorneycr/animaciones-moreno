@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <header className="header">
             <Link to="/">
-                <img className='logo' src={logo} alt="logo" />
+                <img className='logo' src={logo} alt="logo" width="150" height="65" />
             </Link>
             <nav className="nav">
                 <Link to="/">{t['header_home']}</Link>

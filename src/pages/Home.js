@@ -86,10 +86,12 @@ const Home = ({ services }) => {
             <section className="contact">
                 <p>{t['home_callUs']} <strong>(800) 8888-8888</strong></p>
                 <section className="locations">
-                    <h4>{t['home_locations']}</h4>
+                    <h2>{t['home_locations']}</h2>
                     <p>{t['home_locationList']}</p>
                 </section>
-                <button className="cta-button"><Link to="/contact">{t['home_contact']}</Link></button>
+                <button className="cta-button">
+                    <Link to="/contact">{t['home_contact']}</Link>
+                </button>
             </section>
         </>
     );
