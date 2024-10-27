@@ -48,7 +48,7 @@ const EventCalendar = () => {
 
     const handleAddEvent = (e) => {
         e.preventDefault();
-        const { title, date, type } = newEvent;
+        const { date, type } = newEvent;
         const eventDate = new Date(date);
 
         const now = new Date();

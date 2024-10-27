@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './QuotePage.css';
@@ -41,6 +42,15 @@ function QuotePage({ services }) {
   if (!selectedService) {
     return (
       <section className="not-found">
+        <Helmet>
+          <title>{t['quote_service_not_found_title']} - Animaciones Moreno</title>
+          <meta name="description" content={t['quote_service_not_found_message']} />
+          <meta property="og:title" content={t['quote_service_not_found_title']} />
+          <meta property="og:description" content={t['quote_service_not_found_message']} />
+          <meta property="og:url" content={`https://animaciones-moreno-topaz.vercel.app/quote/${slug}`} />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href={`https://animaciones-moreno-topaz.vercel.app/quote/${slug}`} />
+        </Helmet>
         <h1>{t['quote_service_not_found_title']}</h1>
         <p>{t['quote_service_not_found_message']}</p>
         <Link to="/" className="back-home">{t['quote_back_home']}</Link>
@@ -50,6 +60,17 @@ function QuotePage({ services }) {
 
   return (
     <main className="main-content">
+      <Helmet>
+        <title>{t['quote_page_title']} - {selectedService.name}</title>
+        <meta name="description" content={`${t['quote_page_description']} ${selectedService.name}`} />
+        <meta property="og:title" content={`${t['quote_page_title']} - ${selectedService.name}`} />
+        <meta property="og:description" content={`${t['quote_page_description']} ${selectedService.name}`} />
+        <meta property="og:url" content={`https://animaciones-moreno-topaz.vercel.app/quote/${slug}`} />
+        <meta property="og:image" content={selectedService.image} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={`https://animaciones-moreno-topaz.vercel.app/quote/${slug}`} />
+      </Helmet>
+
       <section className="service-section">
         <figure className="service-image-placeholder">
           <img src={selectedService.image} alt={selectedService.name} />
@@ -63,6 +84,7 @@ function QuotePage({ services }) {
           ))}
         </section>
       </section>
+      
       <section className="form-section">
         <form className="appointment-form" onSubmit={formik.handleSubmit}>
           <select value={selectedService.name} disabled>

@@ -3,12 +3,37 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import HeroSlider from '../components/HeroSlider';
 import { LanguageContext } from '../contexts/LanguageContext';
+import { Helmet } from "react-helmet";
 
 const Home = ({ services }) => {
     const { t } = useContext(LanguageContext);
 
     return (
         <>
+            <Helmet>
+                {/* Título de la página */}
+                <title>{t['home_homeTitle']} - Animaciones Moreno</title>
+                
+                {/* Meta descripción */}
+                <meta name="description" content={t['home_metaDescription']} />
+                
+                {/* Palabras clave (SEO Keywords) */}
+                <meta name="keywords" content="eventos, animaciones, catering, decoración, organización de eventos" />
+                
+                {/* Meta para redes sociales (Open Graph) */}
+                <meta property="og:title" content={t['home_homeTitle']} />
+                <meta property="og:description" content={t['home_metaDescription']} />
+                <meta property="og:url" content="https://animaciones-moreno-topaz.vercel.app/" />
+                <meta property="og:type" content="website" />
+                
+                {/* Twitter Card meta tags */}
+                <meta name="twitter:title" content={t['home_homeTitle']} />
+                <meta name="twitter:description" content={t['home_metaDescription']} />
+                
+                {/* URL canónica */}
+                <link rel="canonical" href="https://animaciones-moreno-topaz.vercel.app/" />
+            </Helmet>
+            
             <HeroSlider />
 
             <section id='services' className="services">

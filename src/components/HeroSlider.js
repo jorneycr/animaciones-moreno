@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import Slider from 'react-slick';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import './HeroSlider.css';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 import hero1 from '../assets/images/home/hero1.jpg';
 import hero2 from '../assets/images/home/hero2.jpg';
 import hero3 from '../assets/images/home/hero3.jpg';
-
 
 const HeroSlider = () => {
     const { t } = useContext(LanguageContext);
@@ -37,7 +38,12 @@ const HeroSlider = () => {
                         style={{ backgroundImage: `url(${slide.src})` }}
                     >
                         <section className="hero-text">{t['heroSlider_text']}</section>
-                        <img src={slide.src} alt={slide.alt} style={{ display: 'block' }} />
+                        <LazyLoadImage
+                            src={slide.src}
+                            alt={slide.alt}
+                            effect="blur"
+                            style={{ display: 'block' }}
+                        />
                     </section>
                 </section>
             ))}

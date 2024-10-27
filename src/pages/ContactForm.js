@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './ContactForm.css';
@@ -35,64 +36,98 @@ const ContactForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className="contact-form-animaciones">
-      <label htmlFor="name" className="contact-form-animaciones-label">{t['contact_name_label']}</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.name}
-        className={`contact-form-animaciones-input ${formik.touched.name && formik.errors.name ? 'contact-form-animaciones-error' : ''}`}
-      />
-      {formik.touched.name && formik.errors.name ? (
-        <span className="contact-form-animaciones-error-message">{formik.errors.name}</span>
-      ) : null}
+    <>
+      <Helmet>
+        <title>{`${t['contact_page_title'] || 'Contact'} - Animaciones Moreno`}</title>
+        <meta name="description" content={t['contact_page_description'] || 'Contact Animaciones Moreno for more information.'} />
+        <meta property="og:title" content={t['contact_page_title'] || 'Contact'} />
+        <meta property="og:description" content={t['contact_page_description'] || 'Contact Animaciones Moreno for more information.'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://animaciones-moreno-topaz.vercel.app/contact" />
+        <link rel="canonical" href="https://animaciones-moreno-topaz.vercel.app/contact" />
+      </Helmet>
 
-      <label htmlFor="email" className="contact-form-animaciones-label">{t['contact_email_label']}</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
-        className={`contact-form-animaciones-input ${formik.touched.email && formik.errors.email ? 'contact-form-animaciones-error' : ''}`}
-      />
-      {formik.touched.email && formik.errors.email ? (
-        <span className="contact-form-animaciones-error-message">{formik.errors.email}</span>
-      ) : null}
+      <form onSubmit={formik.handleSubmit} className="contact-form-animaciones">
+        <label htmlFor="name" className="contact-form-animaciones-label">
+          {t['contact_name_label']}
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.name}
+          className={`contact-form-animaciones-input ${formik.touched.name && formik.errors.name ? 'contact-form-animaciones-error' : ''
+            }`}
+        />
+        {formik.touched.name && formik.errors.name ? (
+          <span className="contact-form-animaciones-error-message">
+            {formik.errors.name}
+          </span>
+        ) : null}
 
-      <label htmlFor="phone" className="contact-form-animaciones-label">{t['contact_phone_label']}</label>
-      <input
-        id="phone"
-        name="phone"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.phone}
-        className={`contact-form-animaciones-input ${formik.touched.phone && formik.errors.phone ? 'contact-form-animaciones-error' : ''}`}
-      />
-      {formik.touched.phone && formik.errors.phone ? (
-        <span className="contact-form-animaciones-error-message">{formik.errors.phone}</span>
-      ) : null}
+        <label htmlFor="email" className="contact-form-animaciones-label">
+          {t['contact_email_label']}
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+          className={`contact-form-animaciones-input ${formik.touched.email && formik.errors.email ? 'contact-form-animaciones-error' : ''
+            }`}
+        />
+        {formik.touched.email && formik.errors.email ? (
+          <span className="contact-form-animaciones-error-message">
+            {formik.errors.email}
+          </span>
+        ) : null}
 
-      <label htmlFor="message" className="contact-form-animaciones-label">{t['contact_message_label']}</label>
-      <textarea
-        id="message"
-        name="message"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.message}
-        className={`contact-form-animaciones-textarea ${formik.touched.message && formik.errors.message ? 'contact-form-animaciones-error' : ''}`}
-      />
-      {formik.touched.message && formik.errors.message ? (
-        <span className="contact-form-animaciones-error-message">{formik.errors.message}</span>
-      ) : null}
+        <label htmlFor="phone" className="contact-form-animaciones-label">
+          {t['contact_phone_label']}
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.phone}
+          className={`contact-form-animaciones-input ${formik.touched.phone && formik.errors.phone ? 'contact-form-animaciones-error' : ''
+            }`}
+        />
+        {formik.touched.phone && formik.errors.phone ? (
+          <span className="contact-form-animaciones-error-message">
+            {formik.errors.phone}
+          </span>
+        ) : null}
 
-      <button type="submit" className="contact-form-animaciones-button">{t['contact_submit_button']}</button>
-    </form>
+        <label htmlFor="message" className="contact-form-animaciones-label">
+          {t['contact_message_label']}
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.message}
+          className={`contact-form-animaciones-textarea ${formik.touched.message && formik.errors.message ? 'contact-form-animaciones-error' : ''
+            }`}
+        />
+        {formik.touched.message && formik.errors.message ? (
+          <span className="contact-form-animaciones-error-message">
+            {formik.errors.message}
+          </span>
+        ) : null}
+
+        <button type="submit" className="contact-form-animaciones-button">
+          {t['contact_submit_button']}
+        </button>
+      </form>
+    </>
   );
 };
 

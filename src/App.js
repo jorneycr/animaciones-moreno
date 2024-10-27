@@ -33,7 +33,7 @@ import ReactGA from 'react-ga4';
 import UsePageTracking from './UsePageTracking';
 
 // Inicializa Google Analytics
-ReactGA.initialize('G-XT3BYY539G');  // Reemplaza con tu ID de seguimiento
+ReactGA.initialize('G-XT3BYY539G'); 
 
 function App() {
     const [services, setServices] = useState([]);
