@@ -17,11 +17,6 @@ body {
   background-color: #f8f8f8;
 }
 
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
 .cta {
   display: flex;
   align-items: center;

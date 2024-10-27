@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import SocialMedia from './SocialMedia';
-import logoWhite from '../assets/images/logoBlanco.png';
+import logoWhite from '../assets/images/logoBlanco.webp';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const Footer = () => {

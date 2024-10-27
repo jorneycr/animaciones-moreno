@@ -15,22 +15,22 @@ import Login from './pages/Login/Login';
 import AdminPanel from './pages/CMS/AdminPanel';
 import ContactForm from './pages/ContactForm';
 import QuotePage from './pages/QuotePage';
+import ForgotPassword from './pages/Login/ForgotPassword';
 import Blog from './components/Blog';
 import Reviews from './components/Reviews';
 import GalleryAll from './components/GalleryAll';
 import PersonalDirectory from './components/PersonalDirectory';
 import EventCalendar from './components/EventCalendar';
-
-import despedidas from './assets/images/home/despedidas.jpg';
-import escolares from './assets/images/home/escolares.jpg';
-import bodas from './assets/images/home/bodas.jpg';
-import familiares from './assets/images/home/familiares.jpg';
-import graduaciones from './assets/images/home/graduaciones.jpg';
-import cumpleanos from './assets/images/home/cumpleanos.jpg';
 import BlogPost from './components/BlogPost';
-import ForgotPassword from './pages/Login/ForgotPassword';
 import ReactGA from 'react-ga4';
 import UsePageTracking from './UsePageTracking';
+
+import despedidas from './assets/images/home/despedidas.webp';
+import escolares from './assets/images/home/escolares.webp';
+import bodas from './assets/images/home/bodas.webp';
+import familiares from './assets/images/home/familiares.webp';
+import graduaciones from './assets/images/home/graduaciones.webp';
+import cumpleanos from './assets/images/home/cumpleanos.webp';
 
 // Inicializa Google Analytics
 ReactGA.initialize('G-XT3BYY539G'); 

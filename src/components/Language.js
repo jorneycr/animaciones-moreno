@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './Language.css';
-import esLogo from '../assets/images/es.png';
-import enLogo from '../assets/images/en.png';
-import frLogo from '../assets/images/fr.png';
+import esLogo from '../assets/images/es.webp';
+import enLogo from '../assets/images/en.webp';
+import frLogo from '../assets/images/fr.webp';
 import { LanguageContext } from '../contexts/LanguageContext';
 
 const Language = () => {

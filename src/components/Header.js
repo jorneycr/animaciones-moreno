@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.webp';
 import Language from './Language';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { useUser } from '../contexts/UserContext';
